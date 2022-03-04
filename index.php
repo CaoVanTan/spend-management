@@ -62,7 +62,7 @@
             </a>
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
-                    <li class="header__navbar-item">
+                    <!-- <li class="header__navbar-item ">
                         <a href="" class="header__navbar-item-link text-dark-brown text-16">
                             Về chúng tôi
                         </a>
@@ -71,10 +71,15 @@
                         <a href="" class="header__navbar-item-link text-dark-brown text-16">
                             Tuyển dụng
                         </a>
-                    </li>
-                    <li class="header__navbar-item">
+                    </li> -->
+                    <li class="header__navbar-item header__navbar-item-line">
                         <a href="login.php" class="header__navbar-item-link text-dark-brown text-16">
                             Đăng nhập
+                        </a>
+                    </li>
+                    <li class="header__navbar-item ms-5">
+                        <a href="./register.php" class="header__navbar-item-link text-dark-brown text-16">
+                            Đăng ký
                         </a>
                     </li>
                 </ul>
@@ -86,11 +91,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h1 class="wrap__text text-64">Cách đơn giản nhất</h1>
-                            <p>
-                            <h1 class="wrap__text text-64">để quản lí</h1>
-                            <h1 class="wrap__text text-64">tài chính cá nhân</h1>
-                            </p>
+                            <h1 class="wrap__text text-64">Cách đơn giản nhất <br/> để quản lí tài chính cá nhân</h1>
                             <div class="button">
                                 <button class="btn">
                                     <a href="" class="btn__link">Phiên bản web</a>
