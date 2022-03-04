@@ -61,14 +61,14 @@
     <div class="wrap__login">
         <div class="container__login">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="wrap__form">
                         <div class="form__title-text">
                             <h2>Log In</h2>
                         </div>
                         <div class="form__body">
                             <div class="socials fl">
-                                <div class="socials__des">
+                                <div class="socials__des text-start">
                                     <span>Using social networking accounts</span>
                                 </div>
                                 <div class="socials__item">
@@ -135,14 +135,14 @@
                                 </div>
                             </div>
                             <div class="account fl">
-                                <div class="account__des">
+                                <div class="account__des text-start">
                                     <span>Using Money Lover account</span>
                                 </div>
                                 <form action="" class="form">
                                     <input class="input__text" type="text" placeholder="Email">
                                     <input class="input__text" type="text" placeholder="Password">
                                     <div class="form__forgot">
-                                        <a href="" class="form__forgot-link">Forgot Password?</a>
+                                        <a href="#" class="form__forgot-link">Forgot Password?</a>
                                     </div>
                                     <button class="form__btn">LOGIN</button>
                                 </form>

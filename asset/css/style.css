@@ -9,9 +9,9 @@ html {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-<<<<<<< HEAD:assest/css/style.css
 h1 {
   font-size: 64px;
 }
@@ -24,7 +24,6 @@ ul {
   background-color: #fff;
 }
 
-=======
 .header-left {
   width: 100px;
   height: 100%;
@@ -70,18 +69,6 @@ ul {
   color: #000;
 }
 
-
-
-
-
-
-body,
-html {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
->>>>>>> 017f825b3fe91667a94a1fd126120d66a6920336:asset/css/style.css
 /* CSS HEADER */
 .header {
   display: flex;
@@ -89,8 +76,9 @@ html {
   height: 100px;
   align-items: center;
 }
-.header__img {
+.header__logo__img {
   display: block;
+  width: 120px;
 }
 .header__navbar {
   display: flex;
@@ -107,7 +95,7 @@ html {
 
 .header__navbar-item-line::before {
   position: absolute;
-  top: 3px;
+  top: 2px;
   right: -25px;
   content: "";
   width: 2px;
@@ -252,15 +240,25 @@ a:hover {
 
 
 /* CSS LOGIN */
-
 .main__login {
-  padding: 50px;
+  padding: 50px 50px 40px;
   justify-content: center;
   background-color: #00710F;
 }
+
+.form__title-text {
+  margin-bottom: 30px;
+}
+
 .form__body {
   display: flex;
 }
+
+.account__des {
+  margin-left: 15px;
+  color: var(--text-gray);
+}
+
 .wrap__login {
   display: flex;
   justify-content: center;
@@ -272,8 +270,13 @@ a:hover {
 .socials {
   margin-right: 10px;
 }
+
+.socials__des {
+  color: var(--text-gray);
+}
+
 .socials__item {
-  margin-top: 46px;
+  margin: 20px 5px 0 0;
 }
 .socials__item-btn {
   display: flex;
@@ -286,6 +289,8 @@ a:hover {
 }
 .socials__connect {
   padding-left: 36px;
+  font-weight: 500;
+  opacity: 0.85;
 }
 .gg {
   border: 2px solid red;
@@ -306,8 +311,8 @@ a:hover {
 }
 .form {
   border-left: 2px solid #e0e0e0;
-  padding-left: 14px;
-  margin-top: 46px;
+  padding-left: 15px;
+  margin-top: 20px;
 }
 .flex {
   flex: 1;
@@ -322,30 +327,56 @@ a:hover {
   margin: 0 0 20px;
   outline: none;
 }
+
+.input__text:hover,
+.input__text:focus {
+  border: 2px solid #00bc2a;
+  caret-color: #00bc2a;
+}
+
 .form__forgot-link {
   text-decoration: none;
   float: right;
   color: #2DB84C;
-
 }
+
+.form__forgot-link:hover {
+  color: #0c710f;
+}
+
 .form__btn {
   width: 100%;
   border-radius: 8px;
-  height: 46px;
+  height: 42px;
   background-color: #0fc828;
   border: none;
   color: #fff;
   font-weight: bold;
 }
+
+.form__btn:hover {
+  background-color: #0c710f;
+}
+
 .form__forgot {
-  margin-bottom: 40px;
+  margin: -10px 0 40px;
 }
 .form__suggest {
-  margin-top: 30px;
+  margin-top: 15px;
 }
+
+.form__suggest-text {
+  margin-bottom: 5px;
+}
+
 .form__suggest-text-link {
   color: #2DB84C;
 }
+
+.form__suggest-text-link:hover {
+  color: #0c710f;
+}
+
 .footer__login {
   background-color: #00710F;
   width: 100%;
