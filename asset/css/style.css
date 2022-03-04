@@ -59,6 +59,8 @@
     text-transform: uppercase;
 }
 
+.nav-link1:hover {}
+
 .nav-link1:hover {
     color: #000;
 }
