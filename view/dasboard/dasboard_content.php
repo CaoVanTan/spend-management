@@ -233,7 +233,7 @@ include_once '../../partials-front/header.php';
                 </div>
             </div>
             <!-- No transaction -->
-            <div class="main">
+            <div class="jsmain">
                 <div class="main-item">
                     <span style="font-size: 80px;">:-)</span>
                     <div>

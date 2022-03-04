@@ -1,15 +1,15 @@
 $(document).ready(function() {
     $(".jsthistmonth").click(function() {
         $(".thisMonth").show();
-        $(".main").hide();
+        $(".jsmain").hide();
     });
     $(".jslastmonth").click(function() {
         $(".thisMonth").hide();
-        $(".main").show();
+        $(".jsmain").show();
     });
     $(".jsFuture").click(function() {
         $(".thisMonth").hide();
-        $(".main").show();
+        $(".jsmain").show();
     });
     $(".list-transaction").click(function() {
         $(".js_detail").show();
