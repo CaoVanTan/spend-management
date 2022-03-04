@@ -60,15 +60,11 @@
     text-transform: uppercase;
 }
 
-.nav-link1:hover {}
-
 .nav-link1:hover {
     color: #000;
 }
 
-
 /* CSS HEADER */
-
 .header {
     display: flex;
     justify-content: space-between;
