@@ -43,10 +43,11 @@ ul {
     background: rgba(0, 0, 0, .04);
 }
 
+/* Header Dashboard */
 .header-top {
     padding: 20px 40px;
     margin-left: 100px;
-    height: 80px;
+    height: 70px;
     border-bottom: 1px solid #ccc;
 }
 
