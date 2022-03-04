@@ -323,6 +323,11 @@
     border: 1px solid #000;
 }
 
+.content-list-item1 {
+    display: flex;
+    padding-left: 3px
+}
+
 .input {
     border: none;
 }

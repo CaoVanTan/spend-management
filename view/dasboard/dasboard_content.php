@@ -142,14 +142,14 @@ include_once '../../partials-front/header.php';
     </div>
     <div class="header-top">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4" style = "display: flex;">
             <div class="header-icon">
                 <div class="imgheader">
                     <img src="https://static.moneylover.me/img/icon/ic_category_all.png" alt="" style = "height: 45px">
                 </div>
                 <div class="cate-note-amount-content" style = "margin-top: -3px">
                 <span>Total <i class="fa-solid fa-angle-down" style = "font-size: 10px;"></i></span>
-                     <div class="wallet-tran">
+                     <div class="wallet-tran" style = "display: flex;">
                      0 ₫
                      </div>
                 </div>
@@ -382,17 +382,17 @@ include_once '../../partials-front/header.php';
                     <div class="content-list-item1">
                         <p style="margin-bottom: 0;opacity: 0.8;">Amount</p>
                     </div>
-                    <div class="content-list-item2">
+                    <div class="content-list-item1">
                         <input type="text" class="input" placeholder="0">
                     </div>
                 </div>
             </div>
-            <div class="row" style="padding-left: 50px;">
+            <div class="row" style="padding-left: 39px;">
                 <div class="content-list-item">
                     <div class="content-list-item1">
                         <p style="margin-bottom: 0;opacity: 0.8;">Date</p>
                     </div>
-                    <div class="content-list-item2">
+                    <div class="content-list-item1">
                         <input type="date" name="" id="" style="border: none;
     outline: none;
     padding-right: 13px;">
@@ -404,14 +404,14 @@ include_once '../../partials-front/header.php';
                     <div class="content-list-item1">
                         <p style="margin-bottom: 0;opacity: 0.8;">Note</p>
                     </div>
-                    <div class="content-list-item2">
+                    <div class="content-list-item1">
                         <input type="text" class="input" placeholder="Note">
                     </div>
                 </div>
             </div>
             <p style="padding-left: 40px;
     margin-top: 10px;">Add more details</p>
-            <div class="button">
+            <div class="button1">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button class="jsbtntran btn btn-secondary me-md-2" type="button">Cancle</button>
                     <button class="btn btn-secondary" type="button" style="margin-right: 60px;
@@ -461,12 +461,12 @@ include_once '../../partials-front/header.php';
                     </div>
                 </div>
             </div>
-            <div class="row" style="padding-left: 50px;">
+            <div class="row" style="padding-left: 39px;">
                 <div class="content-list-item">
                     <div class="content-list-item1">
                         <p style="margin-bottom: 0;opacity: 0.8;">Date</p>
                     </div>
-                    <div class="content-list-item2">
+                    <div class="content-list-item1">
                         <input type="date" name="" id="" style="border: none;
     outline: none;
     padding-right: 13px;">
@@ -478,14 +478,14 @@ include_once '../../partials-front/header.php';
                     <div class="content-list-item1">
                         <p style="margin-bottom: 0;opacity: 0.8;">Note</p>
                     </div>
-                    <div class="content-list-item2">
+                    <div class="content-list-item1">
                         <input type="text" class="input" placeholder="Note">
                     </div>
                 </div>
             </div>
             <p style="padding-left: 40px;
     margin-top: 10px;">Add more details</p>
-            <div class="button">
+            <div class="button1">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button class="jsbtntran btn btn-secondary me-md-2" type="button">Cancle</button>
                     <button class="btn btn-secondary" type="button" style="margin-right: 60px;
