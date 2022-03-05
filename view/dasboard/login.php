@@ -64,12 +64,12 @@
                 <div class="col-md-7">
                     <div class="wrap__form">
                         <div class="form__title-text">
-                            <h2>Log In</h2>
+                            <h2>Đăng nhập</h2>
                         </div>
                         <div class="form__body">
                             <div class="socials fl">
                                 <div class="socials__des text-start">
-                                    <span>Using social networking accounts</span>
+                                    <span>Sử dụng tài khoản mạng xã hội</span>
                                 </div>
                                 <div class="socials__item">
                                     <button class="socials__item-btn gg">
@@ -97,7 +97,7 @@
                                                     fill-rule="evenodd"></path>
                                             </g>
                                         </svg>
-                                        <span class="socials__connect">Connect with Google</span>
+                                        <span class="socials__connect">Kết nối với Google</span>
                                     </button>
                                     <button class="socials__item-btn fb">
                                         <svg data-v-edfbec8c="" id="Group_817" data-name="Group 817"
@@ -115,7 +115,7 @@
                                                     fill="none"></rect>
                                             </g>
                                         </svg>
-                                        <span class="socials__connect">Connect with Facebook</span>
+                                        <span class="socials__connect">Kết nối với Facebook</span>
                                     </button>
                                     <button class="socials__item-btn ip">
                                         <svg id="Group_788" data-name="Group 788" xmlns="http://www.w3.org/2000/svg"
@@ -130,25 +130,25 @@
                                                     transform="translate(-2.678 -1.952)"></path>
                                             </g>
                                         </svg>
-                                        <span class="socials__connect">Sign in with Apple</span>
+                                        <span class="socials__connect">Đăng nhập với Apple</span>
                                     </button>
                                 </div>
                             </div>
                             <div class="account fl">
                                 <div class="account__des text-start">
-                                    <span>Using Money Lover account</span>
+                                    <span>Sử dụng tài khoản Smart Money</span>
                                 </div>
                                 <form action="" class="form">
-                                    <input class="input__text" type="text" placeholder="Email">
-                                    <input class="input__text" type="text" placeholder="Password">
+                                    <input class="input__text" type="text" placeholder="Tên đăng nhập">
+                                    <input class="input__text" type="password" placeholder="Mật khẩu">
                                     <div class="form__forgot">
-                                        <a href="#" class="form__forgot-link">Forgot Password?</a>
+                                        <a href="#" class="form__forgot-link">Quên mật khẩu?</a>
                                     </div>
-                                    <button class="form__btn">LOGIN</button>
+                                    <button class="form__btn">ĐĂNG NHẬP</button>
                                 </form>
                                 <div class="form__suggest">
-                                    <p class="form__suggest-text">Don’t have an account?
-                                        <a href="register.php" class="form__suggest-text-link">Register</a>
+                                    <p class="form__suggest-text">Bạn không có tài khoản?
+                                        <a href="register.php" class="form__suggest-text-link">Đăng ký</a>
                                     </p>
                                 </div>
 
