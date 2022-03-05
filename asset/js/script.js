@@ -13,7 +13,7 @@ $(document).ready(function() {
     });
     $(".list-transaction").click(function() {
         $(".js_detail").show();
-        $(".jscontent-main").css({ marginRight: "370px" });
+        $(".jscontent-main").css({ marginRight: "690px" });
     });
     $(".jsbtnedittran").click(function() {
         $(".Edit-transaction").show();
