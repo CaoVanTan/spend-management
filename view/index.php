@@ -1,4 +1,4 @@
-<?php include_once '../../partials-front/header.php' ?>
+<?php include_once '../partials-front/header.php' ?>
 
 <body class="position-relative">
     <!-- HEADER -->
@@ -95,7 +95,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6">
                             <div class="box-img">
-                                <img class="img" src="../../asset/img/anh1.png" alt="">
+                                <img class="img" src="../asset/img/anh1.png" alt="">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6">
@@ -126,7 +126,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6">
                             <div class="box-img">
-                                <img class="img" src="../../asset/img/anh2.png" alt="">
+                                <img class="img" src="../asset/img/anh2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6">
                             <div class="box-img">
-                                <img class="img" src="../../asset/img/anh3.png" alt="">
+                                <img class="img" src="../asset/img/anh3.png" alt="">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6">
@@ -394,7 +394,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="app__img">
-                                <img class="img-app" src="../../asset/img/anh4.png" alt="">
+                                <img class="img-app" src="../asset/img/anh4.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -485,4 +485,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
 </body>
-<?php include '../../partials-front/footer.php' ?>>
+<?php include '../partials-front/footer.php' ?>

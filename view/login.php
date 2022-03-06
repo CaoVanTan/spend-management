@@ -1,6 +1,4 @@
-
-
-<?php include_once '../../partials-front/header.php'?>
+<?php include_once '../partials-front/header.php'?>
 <body>
     <div class="main__login">
         <div class="container">
@@ -58,6 +56,7 @@
                 </div>
             </div>
         </div>
+
     </div>
     <div class="wrap__login">
         <div class="container__login">
@@ -65,7 +64,7 @@
                 <div class="col-md-7">
                     <div class="wrap__form">
                         <div class="form__title-text">
-                            <h2>Đăng ký</h2>
+                            <h2>Đăng nhập</h2>
                         </div>
                         <div class="form__body">
                             <div class="socials fl">
@@ -140,14 +139,16 @@
                                     <span>Sử dụng tài khoản Smart Money</span>
                                 </div>
                                 <form action="" class="form">
-                                    <input class="input__text" type="email" placeholder="Email">
                                     <input class="input__text" type="text" placeholder="Tên đăng nhập">
                                     <input class="input__text" type="password" placeholder="Mật khẩu">
-                                    <button class="form__btn mt-2">ĐĂNG KÝ</button>
+                                    <div class="form__forgot">
+                                        <a href="#" class="form__forgot-link">Quên mật khẩu?</a>
+                                    </div>
+                                    <button class="form__btn">ĐĂNG NHẬP</button>
                                 </form>
                                 <div class="form__suggest">
-                                    <p class="form__suggest-text">Bạn đã có tài khoản?
-                                        <a href="login.php" class="form__suggest-text-link">Đăng nhập</a>
+                                    <p class="form__suggest-text">Bạn không có tài khoản?
+                                        <a href="./register.php" class="form__suggest-text-link">Đăng ký</a>
                                     </p>
                                 </div>
 
@@ -174,4 +175,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
 </body>
-<?php include '../../partials-front/footer.php' ?>
+<?php include '../partials-front/footer.php' ?>
+
+
