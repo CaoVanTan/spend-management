@@ -98,8 +98,7 @@ ul {
 }
 
 .nav-link:hover {
-  color: #000;
-  background-color: #000;
+  fill: #000;
 }
 
 .header-content {
@@ -119,9 +118,11 @@ ul {
   text-transform: uppercase;
 }
 
-.nav-link1:hover {
+.nav-link1:hover,
+.nav-link1:focus {
   color: var(--text);
   background-color: var(--bg-white);
+  cursor: pointer !important;
 }
 
 /* css body */
@@ -174,9 +175,18 @@ ul {
 .view-report {
   text-align: center;
   margin: 20px 0 15px;
+}
+
+.view-report a {
+  color: var(--primary-color);
+  padding: 10px;
   font-size: 15px;
-    font-weight: 500;
-    opacity: 0.8;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.view-report a:hover {
+  color: #0c710f;
 }
 
 .item__transaction-date {
@@ -218,7 +228,7 @@ ul {
 
 .item-transation:hover {
   cursor: pointer;
-  background-color: rgba(45,184,76,.08);
+  background-color: rgba(45, 184, 76, 0.08);
 }
 
 .item-transation-name {
@@ -405,6 +415,39 @@ ul {
   z-index: 5;
 }
 
+.button1 {
+  padding: 30px 40px 15px;
+}
+
+.btn-cancel {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: #2db84c;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 5px 30px;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #2db84c;
+  cursor: pointer;
+}
+
+.btn-save {
+  background-color: #2db84c;
+  color: var(--bg-white);
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 5px 30px;
+  margin-left: 18px;
+}
+
+.btn-save:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  color: var(--bg-white);
+}
+
 .transaction {
   display: none;
   width: 100%;
@@ -413,6 +456,7 @@ ul {
   top: 0;
   right: 0;
   position: fixed;
+  z-index: 2;
 }
 
 .add-transaction {
@@ -466,6 +510,7 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   top: 0;
+  z-index: 6;
 }
 
 .seclect-category {
@@ -479,36 +524,37 @@ ul {
 
 .search-category {
   width: 50%;
-  height: 49px;
+  height: 45px;
+  margin-left: 25%;
   border: 1px solid #e9ecef;
-  margin-left: 145px;
   background-color: #e9ecef;
   border-radius: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .search {
-  padding: 12px;
+  padding: 12px 15px;
+  width: 100%;
 }
 
 .slider-category {
-  width: 90%;
-  height: 45px;
-  margin: 11px 25px 0;
+  margin: 5px 25px;
 }
 
 .list-expense {
-  width: 70%;
-  min-height: 200px;
-  margin: 16px 75px;
+  /* min-height: 200px; */
+  margin: 16px 50px;
 }
 
 .list-item-expense {
-  padding: 15px 10px;
+  padding: 10px 10px;
   border-bottom: 1px solid #ccc;
 }
 
 .list-item-expense:hover {
-  background-color: #e9ecef;
+  background-color: rgba(45,184,76,.08);
+  cursor: pointer;
 }
 
 .list-debt {
@@ -956,7 +1002,7 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.3);
   align-items: center;
   justify-content: center;
-  /* display: none; */
+  display: none;
 }
 
 .modal-container {
@@ -966,7 +1012,7 @@ a:hover {
   position: relative;
   background-color: #f4f4f4;
   border-radius: 4px;
-  /* display: none; */
+  display: none;
 }
 
 .bb {

@@ -19,13 +19,13 @@ include_once '../../partials-front/header.php';
                 <div class="header-item">
                     <ul class="nav justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link nav-link1 jslastmonth" href="#">01/01/2022 - 31/01/2022</a>
+                            <a class="nav-link nav-link1 jslastmonth2" href="#">01/01/2022 - 31/01/2022</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link1 jsthistmonth" href="#">Tháng trước</a>
+                            <a class="nav-link nav-link1 jslastmonth1" href="#">Tháng trước</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link1 jsFuture">Tháng này</a>
+                            <a class="nav-link nav-link1 jsthistmonth" href="#">Tháng này</a>
                         </li>
                     </ul>
                 </div>
@@ -54,7 +54,7 @@ include_once '../../partials-front/header.php';
                     <span>-8,000,000.00 ₫</span>
                 </div> -->
                 <div class="view-report">
-                    <a href="#" class="text-uppercase" style="text-decoration: none;color: green;">Xem báo cáo cho tháng này</a>
+                    <a href="#" class="text-uppercase" style="text-decoration: none;">Xem báo cáo cho giai đoạn này</a>
                 </div>
                 <div style="height: 30px; background-color: #e9ecef ;">
                 </div>
@@ -198,7 +198,7 @@ include_once '../../partials-front/header.php';
         <div class="add-transaction">
             <div class="header-add-tran">
                 <span>
-                    Sửa giao dịch
+                    Thêm giao dịch
                 </span>
             </div>
             <div class="content-add-tran">
@@ -213,7 +213,7 @@ include_once '../../partials-front/header.php';
                     </div>
                 </div> -->
                 <div class="d-flex justify-content-between">
-                    <div class="jscategory content-list-item">
+                    <div class="jscategory content-list-item" style="cursor:pointer;">
                         <div class="content-list-item1">
                             <p style="margin-bottom: 0;opacity: 0.8;">Nhóm</p>
                         </div>
@@ -228,15 +228,15 @@ include_once '../../partials-front/header.php';
                             <p style="margin-bottom: 0;opacity: 0.8;">Số tiền</p>
                         </div>
                         <div class="content-list-item2">
-                            <input type="text" class="input" style="opacity: 1;" placeholder="0">
+                            <input id="inputMoney" type="text" class="input" style="opacity: 1;" placeholder="0">
                         </div>
                     </div>
-                    <div class="content-list-item">
+                    <div class="content-list-item" style="cursor:pointer !important;">
                         <div class="content-list-item1">
                             <p style="margin-bottom: 0;opacity: 0.8;">Ngày</p>
                         </div>
                         <div class="content-list-item2">
-                            <input type="date" class="w-100 text-uppercase" style="border: none; outline: none;">
+                            <input type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
                             <!-- <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i> -->
                         </div>
 
@@ -248,27 +248,27 @@ include_once '../../partials-front/header.php';
                     <p class="m-0 w-100" style="opacity: 0.8;">Ghi chú</p>
                 </div>
                 <div class="content-list-item2">
-                    <input type="text" class="input" placeholder="Ghi chú">
+                    <input type="text" class="input w-100" placeholder="Ghi chú">
                 </div>
             </div>
             <div class="button1">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="jsbtntran btn btn-secondary me-md-2" type="button">Cancle</button>
-                    <button class="btn btn-secondary" type="button" style="margin-right: 60px; margin-left: 20px;">Save</button>
+                <div class="d-md-flex justify-content-md-end">
+                    <button class="jsbtntran btn btn-cancel" type="button">Hủy</button>
+                    <button class="btn btn-save" type="button">Lưu</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- add Transaaction -->
     <div class="transaction">
-        <div class="add-transaction">
+    <div class="add-transaction">
             <div class="header-add-tran">
                 <span>
-                    Add transaction
+                    Thêm giao dịch
                 </span>
             </div>
             <div class="content-add-tran">
-                <div class="content-list-item">
+                <!-- <div class="content-list-item">
                     <div class="content-list-item1">
                         <p style="margin-bottom: 0;opacity: 0.8;">Wallet</p>
                     </div>
@@ -277,73 +277,68 @@ include_once '../../partials-front/header.php';
                         <span style="padding-right: 125px;">anh</span>
                         <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i>
                     </div>
-                </div>
-                <div class="jscategory content-list-item">
-                    <div class="content-list-item1">
-                        <p style="margin-bottom: 0;opacity: 0.8;">Category</p>
+                </div> -->
+                <div class="d-flex justify-content-between">
+                    <div class="jscategory content-list-item" style="cursor:pointer;">
+                        <div class="content-list-item1">
+                            <p style="margin-bottom: 0;opacity: 0.8;">Nhóm</p>
+                        </div>
+                        <div class="content-list-item2">
+                            <img data-v-6bc9d4d3="" src="https://static.moneylover.me/img/icon/icon_not_selected.png" style="height: 20px">
+                            <span class="text-input default">Chọn nhóm</span>
+                            <i class="fa-solid fa-angle-right float-end" style="opacity: 0.8; margin-top:3px"></i>
+                        </div>
                     </div>
-                    <div class="content-list-item2">
-                        <img data-v-6bc9d4d3="" src="https://static.moneylover.me/img/icon/icon_not_selected.png" style="height: 20px">
-                        <span class="text-input default" style="margin-right: 40px;
-    margin-left: 4px;">Select category</span>
-                        <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i>
+                    <div class="content-list-item">
+                        <div class="content-list-item1">
+                            <p style="margin-bottom: 0;opacity: 0.8;">Số tiền</p>
+                        </div>
+                        <div class="content-list-item2">
+                            <input id="inputMoney" type="" class="input" style="opacity: 1;" placeholder="0">
+                        </div>
                     </div>
-                </div>
-                <div class="content-list-item">
-                    <div class="content-list-item1">
-                        <p style="margin-bottom: 0;opacity: 0.8;">Amount</p>
-                    </div>
-                    <div class="content-list-item2">
-                        <input type="text" class="input" placeholder="0">
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="padding-left: 39px;">
-                <div class="content-list-item">
-                    <div class="content-list-item1">
-                        <p style="margin-bottom: 0;opacity: 0.8;">Date</p>
-                    </div>
-                    <div class="content-list-item1">
-                        <input type="date" name="" id="" style="border: none;
-    outline: none;
-    padding-right: 13px;">
-                        <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i>
-                    </div>
+                    <div class="content-list-item" style="cursor:pointer !important;">
+                        <div class="content-list-item1">
+                            <p style="margin-bottom: 0;opacity: 0.8;">Ngày</p>
+                        </div>
+                        <div class="content-list-item2">
+                            <input type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
+                            <!-- <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i> -->
+                        </div>
 
-                </div>
-                <div class="content-list-item" style="width:502px">
-                    <div class="content-list-item1">
-                        <p style="margin-bottom: 0;opacity: 0.8;">Note</p>
-                    </div>
-                    <div class="content-list-item1">
-                        <input type="text" class="input" placeholder="Note">
                     </div>
                 </div>
             </div>
-            <p style="padding-left: 40px;
-    margin-top: 10px;">Add more details</p>
+            <div class="content-list-item" style="padding: 10px; margin:0 40px; width:calc(100% - 80px)">
+                <div class="content-list-item1">
+                    <p class="m-0 w-100" style="opacity: 0.8;">Ghi chú</p>
+                </div>
+                <div class="content-list-item2">
+                    <input type="text" class="input w-100" placeholder="Ghi chú">
+                </div>
+            </div>
             <div class="button1">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="jsbtntran btn btn-secondary me-md-2" type="button">Cancle</button>
-                    <button class="btn btn-secondary" type="button" style="margin-right: 60px;
-    margin-left: 20px;">Save</button>
+                <div class="d-md-flex justify-content-md-end">
+                    <button class="jsbtntran btn btn-cancel" type="button">Hủy</button>
+                    <button class="btn btn-save" type="button">Lưu</button>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="category">
         <div class="seclect-category">
             <div class="header-category" style="padding: 25px;">
-                <a href="#" class="jsIcon"><svg data-v-0698e127="" data-v-6db8f2f0="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="ic_arrow_back" version="1.1">
+                <a href="#" class="jsIcon">
+                    <svg data-v-0698e127="" data-v-6db8f2f0="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="ic_arrow_back" version="1.1">
                         <defs data-v-0698e127=""></defs>
                         <g data-v-0698e127="" id="Icons/account/ic_account" stroke="none" stroke-width="1" fill="rgba(0,0,0,.54)" fill-rule="evenodd">
                             <rect data-v-0698e127="" id="blue-background" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="24" height="24"></rect>
                             <polygon data-v-6db8f2f0="" id="Shape" points="19 6.415 17.585 5 12 10.585 6.415 5 5 6.415 10.585 12 5 17.585 6.415 19 12 13.415 17.585 19 19 17.585 13.415 12" data-v-0698e127=""></polygon>
                         </g>
-                    </svg></a>
-                <span style="margin-left: 30px;
-    font-weight: 600;
-    font-size: 20px;">Select category</span>
+                    </svg>
+                </a>
+                <span style="margin-left: 30px;font-weight: 600;font-size: 20px;">Chọn nhóm</span>
             </div>
 
             <div class="search-category">
@@ -355,21 +350,22 @@ include_once '../../partials-front/header.php';
                             <path data-v-6db8f2f0="" d="M16.8472,15.1496 L16.564,15.4328 L15.5056,14.3744 C16.5632,13.068 17.2,11.408 17.2,9.6 C17.2,5.4096 13.7904,2 9.6,2 C5.4096,2 2,5.4096 2,9.6 C2,13.7904 5.4096,17.2 9.6,17.2 C11.408,17.2 13.068,16.5632 14.3744,15.5056 L15.4328,16.564 L15.1496,16.8472 L19.9512,21.6488 L21.648,19.952 L16.8472,15.1496 L16.8472,15.1496 Z M9.6008,14.8 C6.7336,14.8 4.4008,12.4672 4.4008,9.6 C4.4008,6.7328 6.7336,4.4 9.6008,4.4 C12.468,4.4 14.8008,6.7328 14.8008,9.6 C14.8008,12.4672 12.4672,14.8 9.6008,14.8 L9.6008,14.8 Z" id="icon-search" data-v-0698e127=""></path>
                         </g>
                     </svg>
-                    <input type="text" placeholder="Search" style="border: none;outline: none;background-color: #e9ecef;margin-left: 6px;">
+                    <input type="text" placeholder="Tìm kiếm" style="border: none;outline: none;background-color: #e9ecef;margin-left: 6px;">
                 </div>
             </div>
+
             <div class="slider-category">
                 <div class="slider">
                     <ul class="nav justify-content-center">
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="jsDebt nav-link nav-link1" href="#"> Debt/Loan</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
-                            <a name="Expense" class="jsExpense nav-link nav-link1" href="#">Expense</a>
+                            <a name="Expense" class="jsExpense nav-link nav-link1" href="#">Khoản chi tiêu</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="jsIncome nav-link nav-link1">Income</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -377,33 +373,33 @@ include_once '../../partials-front/header.php';
             <!-- list expense -->
             <div class="list-expense">
                 <div class="list-item-expense">
-                    <img src="https://static.moneylover.me/img/icon/ic_category_foodndrink.png" alt="" style="height: 35px">
+                    <img src="../../asset/img/food_drink.png" alt="" style="height: 35px">
                     <span style="padding-left: 15px;">
-                        Food & Beverage
+                        Thực phẩm và đồ uống
                     </span>
                 </div>
                 <div class="list-item-expense">
-                    <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 35px">
+                    <img src="../../asset/img/transport.png" alt="" style="height: 35px">
                     <span style="padding-left: 15px;">
-                        Transportation
+                        Di chuyển
                     </span>
                 </div>
                 <div class="list-item-expense">
-                    <img src="https://static.moneylover.me/img/icon/icon_136.png" alt="" style="height: 35px">
+                    <img src="../../asset/img/bill.png" alt="" style="height: 35px">
                     <span style="padding-left: 15px;">
-                        Rentals
+                        Hóa đơn và tiện ích
                     </span>
                 </div>
                 <div class="list-item-expense">
-                    <img src="https://static.moneylover.me/img/icon/icon_124.png" alt="" style="height: 35px">
+                    <img src="../../asset/img/shopping.png" alt="" style="height: 35px">
                     <span style="padding-left: 15px;">
-                        Water Bill
+                        Mua sắm
                     </span>
                 </div>
                 <div class="list-item-expense">
-                    <img src="https://static.moneylover.me/img/icon/icon_134.png" alt="" style="height: 35px">
+                    <img src="../../asset/img/entertainment.png" alt="" style="height: 35px">
                     <span style="padding-left: 15px;">
-                        Phone Bill
+                        Giải trí
                     </span>
                 </div>
             </div>
