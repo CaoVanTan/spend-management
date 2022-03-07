@@ -138,17 +138,18 @@
                                 <div class="account__des text-start">
                                     <span>Sử dụng tài khoản Smart Money</span>
                                 </div>
-                                <form action="" class="form">
-                                    <input class="input__text" type="text" placeholder="Tên đăng nhập">
-                                    <input class="input__text" type="password" placeholder="Mật khẩu">
+                                <div class="form">
+                                    <input class="input__text" type="text" id ="Username" placeholder="Tên đăng nhập">
+                                    <input class="input__text" type="password" id ="Pass" placeholder="Mật khẩu">
                                     <div class="form__forgot">
-                                        <a href="#" class="form__forgot-link">Quên mật khẩu?</a>
+                                        <a href="#" class="form__forgot-link">Quên mật khẩu?</a> /
+                                        <!-- Bo quen mat khau dc khong -->
                                     </div>
                                     <button class="form__btn">ĐĂNG NHẬP</button>
-                                </form>
+                                </div>
                                 <div class="form__suggest">
                                     <p class="form__suggest-text">Bạn không có tài khoản?
-                                        <a href="./register.php" class="form__suggest-text-link">Đăng ký</a>
+                                        <a href="./register.php" class="form__suggest-text-link" id ="Login">Đăng ký</a>
                                     </p>
                                 </div>
 
@@ -176,5 +177,29 @@
     -->
 </body>
 <?php include '../partials-front/footer.php' ?>
+<script>
+    $(document).ready(function(){
+        $('#Login').click(function(){
+            $Username = $("#Username").val();
+            $Pass = $("Pass").val();
+            if ($Username == "" || $Pass = "") {
+                alert("Vui lòng nhập đầy đủ tài khoản và mật khẩu !!");
+            }else{
+                $.ajax({
+                    url:"../process/login.php",
+                    type: "POST",
+                    data:{
+                        username: $Username,
+                        pass: $Pass,
+                    },
+                    success: function(response){
+                        alert(response);
+                    }
+                })
 
+            }
+        })
+
+    })
+</script>
 
