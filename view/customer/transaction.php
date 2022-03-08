@@ -1,5 +1,7 @@
 <?php
 include_once '../../partials-front/header.php';
+include_once '../../config/config.php';
+// include_once '../../process/customer/getTransaction.php';
 ?>
 
 <section class="position-relative">
@@ -35,7 +37,7 @@ include_once '../../partials-front/header.php';
                 <div class="main-item">
                     <span style="font-size: 80px;">:-)</span>
                     <div>
-                        <span>No transactions</span>
+                        <span>Không có giao dịch</span>
                     </div>
                 </div>
             </div>
@@ -56,9 +58,13 @@ include_once '../../partials-front/header.php';
                 <div class="view-report">
                     <a href="#" class="text-uppercase" style="text-decoration: none;">Xem báo cáo cho giai đoạn này</a>
                 </div>
+
+                <?php
+                    $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id AND MONTH(spend_day) = '.$thisMonth.'";
+                    $result = mysqli_query($con, $sql);
+                ?>
                 <div style="height: 30px; background-color: #e9ecef ;">
                 </div>
-
                 <div class="datetime">
                     <div class="item__transaction-date">
                         <div class="d-flex">
@@ -76,60 +82,35 @@ include_once '../../partials-front/header.php';
                     </div>
 
                     <div class="item__transaction">
-                        <div class="list-transaction">
-                            <div class="item-transation">
-                                <div class="item-transation-name">
-                                    <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 35px;">
-                                    <span>Vận tải</span>
-                                </div>
-                                <span class="item-transation-money">-3,000,000 ₫</span>
-                            </div>
-                        </div>
-                        <div class="list-transaction">
-                            <div class="item-transation">
-                                <div class="item-transation-name">
-                                    <img src="https://static.moneylover.me/img/icon/ic_category_foodndrink.png" alt="" style="height: 35px;">
-                                    <span>Thức ăn</span>
-                                </div>
-                                <span class="item-transation-money">-5,000,000 ₫</span>
-                            </div>
-                        </div>
-                        <div class="list-transaction">
-                            <div class="item-transation">
-                                <div class="item-transation-name">
-                                    <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 35px;">
-                                    <span>Vận tải</span>
-                                </div>
-                                <span class="item-transation-money">-3,000,000 ₫</span>
-                            </div>
-                        </div>
-                        <div class="list-transaction">
-                            <div class="item-transation">
-                                <div class="item-transation-name">
-                                    <img src="https://static.moneylover.me/img/icon/ic_category_foodndrink.png" alt="" style="height: 35px;">
-                                    <span>Thức ăn</span>
-                                </div>
-                                <span class="item-transation-money">-5,000,000 ₫</span>
-                            </div>
-                        </div>
-                        <div class="list-transaction">
-                            <div class="item-transation">
-                                <div class="item-transation-name">
-                                    <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 35px;">
-                                    <span>Vận tải</span>
-                                </div>
-                                <span class="item-transation-money">-3,000,000 ₫</span>
-                            </div>
-                        </div>
-                        <div class="list-transaction">
-                            <div class="item-transation">
-                                <div class="item-transation-name">
-                                    <img src="https://static.moneylover.me/img/icon/ic_category_foodndrink.png" alt="" style="height: 35px;">
-                                    <span>Thức ăn</span>
-                                </div>
-                                <span class="item-transation-money">-5,000,000 ₫</span>
-                            </div>
-                        </div>
+                        <?php
+                            $date = getdate();
+                            $thisMonth = $date['mon'];
+                            echo $thisMonth;
+                            $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id AND MONTH(spend_day) = '.$thisMonth.'";
+                            $result = mysqli_query($con, $sql);
+
+                            if(mysqli_num_rows($result) > 0) {
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    echo '<div class="list-transaction">';
+                                    echo    '<div class="item-transation">';
+                                    echo        '<div class="item-transation-name">';
+                                    echo            '<span>'.$row['group_name'].'</span>';
+                                    echo        '</div>';
+                                    echo        '<span class="item-transation-money">'.$row['money'].'</span>';
+                                    echo    '</div>';
+                                    echo '</div>';
+                                }
+                            }
+
+
+                                    // $str = explode('-', $row['spend_day'])[1];
+                                    // echo "Tháng: ".$str."<hr>";
+                                    ?>
+                                    <!-- <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 35px;"> -->
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -236,7 +217,7 @@ include_once '../../partials-front/header.php';
                             <p style="margin-bottom: 0;opacity: 0.8;">Ngày</p>
                         </div>
                         <div class="content-list-item2">
-                            <input type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
+                            <input value="<?php echo date("Y-m-d") ?>" required type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
                             <!-- <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i> -->
                         </div>
 
@@ -261,7 +242,7 @@ include_once '../../partials-front/header.php';
     </div>
     <!-- add Transaaction -->
     <div class="transaction">
-    <div class="add-transaction">
+        <div class="add-transaction">
             <div class="header-add-tran">
                 <span>
                     Thêm giao dịch
@@ -294,7 +275,7 @@ include_once '../../partials-front/header.php';
                             <p style="margin-bottom: 0;opacity: 0.8;">Số tiền</p>
                         </div>
                         <div class="content-list-item2">
-                            <input id="inputMoney" type="" class="input" style="opacity: 1;" placeholder="0">
+                            <input id="inputMoney" type="text" class="input" style="opacity: 1;" placeholder="0">
                         </div>
                     </div>
                     <div class="content-list-item" style="cursor:pointer !important;">
@@ -302,7 +283,7 @@ include_once '../../partials-front/header.php';
                             <p style="margin-bottom: 0;opacity: 0.8;">Ngày</p>
                         </div>
                         <div class="content-list-item2">
-                            <input type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
+                            <input value="<?php echo date("Y-m-d") ?>" required type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
                             <!-- <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i> -->
                         </div>
 
@@ -458,7 +439,6 @@ include_once '../../partials-front/header.php';
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 <?php
