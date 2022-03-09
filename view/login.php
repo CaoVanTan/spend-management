@@ -142,7 +142,7 @@
                                     <input class="input__text" type="text" id ="Username" placeholder="Tên đăng nhập">
                                     <input class="input__text" type="password" id ="Pass" placeholder="Mật khẩu">
                                     <div class="form__forgot">
-                                        <a href="#" class="form__forgot-link">Quên mật khẩu?</a> /
+                                        <a href="#" class="form__forgot-link">Quên mật khẩu?</a>
                                         <!-- Bo quen mat khau dc khong -->
                                     </div>
                                     <button class="form__btn" id="Login">ĐĂNG NHẬP</button>
@@ -185,12 +185,12 @@
                     },
                     success: function(response){
                     if (response == "Thanhcong") {
-                        window.location.href = "../view/customer/report.php";
+                        window.location.href = "../view/customer/transaction.php";
                     } else if (response == "Sai") {
                         alert("Sai tài khoản hoặc mật khẩu.");
-                    } 
                     }
-                    
+                    }
+
                 })
 
             }
