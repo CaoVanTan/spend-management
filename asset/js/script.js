@@ -15,18 +15,10 @@ $(document).ready(function () {
   });
 
   $(".list-transaction").click(function () {
+    var spend_id = $(this).attr("id");
+    $(".transaction-id").text(spend_id);
     $(".js_detail").show();
     $(".jscontent-main").css({ marginRight: "690px" });
-
-    for(var i = 1; i < $(".list-transaction").length; i++) {
-      
-    }
-    // var spend_id = $(".spend_id").text();
-    // var group_name = $(".group_name").text();
-    // var money = $(".money").text();
-
-    // $(".transaction-name").text(group_name);
-    // $(".detail-money").text(money);
   });
 
   $(".jsbtnedittran").click(function () {

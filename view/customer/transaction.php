@@ -2,6 +2,9 @@
 include_once '../../partials-front/header.php';
 include_once '../../config/config.php';
 // include_once '../../process/customer/getTransaction.php';
+if (!isset($_SESSION)) {
+    session_start();
+}
 ?>
 
 <section class="position-relative">
@@ -85,18 +88,18 @@ include_once '../../config/config.php';
 
                     <div class="item__transaction">
                         <?php
-                        $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id";
+                        $username = $_SESSION['CurrentUser'];
+                        $sql = "SELECT sp.*, g.*, u.* FROM spending sp, groups g, users u WHERE sp.group_id = g.group_id AND sp.user_id = u.user_id AND u.user_name = '$username'";
                         $result = mysqli_query($con, $sql);
 
-                        if(mysqli_num_rows($result) > 0) {
-                            while($row = mysqli_fetch_assoc($result)) {
-                                echo '<div class="list-transaction">';
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo '<div id="' . $row['spend_id'] . '" class="text-decoration-none list-transaction">';
                                 echo    '<div class="item-transation">';
-                                echo        '<div id="" class="d-none spend_id">'.$row['spend_id'].'</div>';
                                 echo        '<div class="item-transation-name">';
-                                echo            '<span id="" class="group_name">'.$row['group_name'].'</span>';
+                                echo            '<span id="" class="group_name">' . $row['group_name'] . '</span>';
                                 echo        '</div>';
-                                echo        '<span id="" class="item-transation-money money">-'.$row['money'] .'<span class="text-decoration-underline ps-1">đ</span></span>';
+                                echo        '<span id="" class="item-transation-money money">-' . $row['money'] . '<span class="text-decoration-underline ps-1">đ</span></span>';
                                 echo    '</div>';
                                 echo '</div>';
                             }
@@ -111,11 +114,6 @@ include_once '../../config/config.php';
 
     <?php
     // Details Transaction
-    // if(isset($_POST["spend_id"])) {
-    //     $spend_id = $_POST["spend_id"];
-    //     $group_name = $_POST["group_name"];
-    //     $money = $_POST["money"];
-    // }
     include_once "./transaction_details.php";
 
     // Add Transaction
@@ -263,6 +261,23 @@ include_once '../../config/config.php';
         </div>
     </div>
 </section>
+
+<script>
+    // $(".list-transaction").click(function() {
+    //     var spend_id = $(this).attr("id");
+    //     $.ajax({
+    //         url: "./transaction.php",
+    //         method: "POST",
+    //         data: {
+    //             spend_id: spend_id,
+    //         },
+    //         success: function(response) {
+
+    //         },
+    //     });
+    // });
+</script>
+
 <?php
 include_once '../../partials-front/footer.php'
 ?>
