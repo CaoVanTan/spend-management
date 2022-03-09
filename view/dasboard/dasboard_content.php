@@ -487,9 +487,8 @@ include_once '../../partials-front/header.php';
     margin-top: 10px;">Add more details</p>
             <div class="button1">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="jsbtntran btn btn-secondary me-md-2" type="button">Cancle</button>
-                    <button class="btn btn-secondary" type="button" style="margin-right: 60px;
-    margin-left: 20px;">Save</button>
+                    <button class="jsbtntran btn btn-secondary me-md-2" type="button" style = "width: 105px">Cancle</button>
+                    <button class="btn btn-secondary" type="button" style="margin-right: 63px;width: 105px;margin-left: 20px;">Save</button>
                 </div>
             </div>
         </div>
