@@ -6,16 +6,6 @@
             </span>
         </div>
         <div class="content-add-tran">
-            <!-- <div class="content-list-item">
-                    <div class="content-list-item1">
-                        <p style="margin-bottom: 0;opacity: 0.8;">Wallet</p>
-                    </div>
-                    <div class="content-list-item2">
-                        <img data-v-6bc9d4d3="" src="https://static.moneylover.me/img/icon/icon.png" style="height: 20px">
-                        <span style="padding-right: 125px;">anh</span>
-                        <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i>
-                    </div>
-                </div> -->
             <div class="d-flex justify-content-between">
                 <div class="jscategory content-list-item" style="cursor:pointer;">
                     <div class="content-list-item1">
@@ -41,9 +31,7 @@
                     </div>
                     <div class="content-list-item2">
                         <input value="<?php echo date("Y-m-d") ?>" required type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
-                        <!-- <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i> -->
                     </div>
-
                 </div>
             </div>
         </div>

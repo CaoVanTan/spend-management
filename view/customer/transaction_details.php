@@ -24,17 +24,15 @@
             <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 50px">
         </div>
         <div class="cate-note-amount-content">
-            <span class="transaction-name">
-                <?php echo $group_name; ?>
-            </span>
+            <span class="transaction-name"></span>
             <div class="date-tran">
                 Thứ năm, 03/03/2022
             </div>
             <div class="note-tran">
                 <!-- Thức ăn -->
             </div>
-            <div class="amount-detail ">
-                <span>-3,000,000 ₫</span>
+            <div class="amount-detail">
+                <span class="detail-money"></span>
             </div>
         </div>
     </div>

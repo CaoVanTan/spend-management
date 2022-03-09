@@ -111,12 +111,12 @@ include_once '../../config/config.php';
 
     <?php
     // Details Transaction
-    if(isset($_POST["spend_id"])) {
-        $spend_id = $_POST["spend_id"];
-        $group_name = $_POST["group_name"];
-        $money = $_POST["money"];
-        include_once "./transaction_details.php";
-    }
+    // if(isset($_POST["spend_id"])) {
+    //     $spend_id = $_POST["spend_id"];
+    //     $group_name = $_POST["group_name"];
+    //     $money = $_POST["money"];
+    // }
+    include_once "./transaction_details.php";
 
     // Add Transaction
     include_once "./transaction_add.php";

@@ -3,44 +3,66 @@ $(document).ready(function () {
     $(".thisMonth").show();
     $(".jsmain").hide();
   });
+
   $(".jslastmonth1").click(function () {
     $(".thisMonth").hide();
     $(".jsmain").show();
   });
+
   $(".jslastmonth2").click(function () {
     $(".thisMonth").hide();
     $(".jsmain").show();
   });
+
   $(".list-transaction").click(function () {
     $(".js_detail").show();
     $(".jscontent-main").css({ marginRight: "690px" });
+
+    for(var i = 1; i < $(".list-transaction").length; i++) {
+      
+    }
+    // var spend_id = $(".spend_id").text();
+    // var group_name = $(".group_name").text();
+    // var money = $(".money").text();
+
+    // $(".transaction-name").text(group_name);
+    // $(".detail-money").text(money);
   });
+
   $(".jsbtnedittran").click(function () {
     $(".Edit-transaction").show();
   });
+
   $(".jsicon_detail").click(function () {
     $(".js_detail").hide();
     $(".jscontent-main").css({ marginRight: "-40px" });
   });
+
   $(".jsbtndletetran").click(function () {
     $(".delete-transaction").show();
   });
+
   $(".jsbtnNodelete").click(function () {
     $(".delete-transaction").hide();
   });
+
   $(".jsbtnaddtran").click(function () {
     $(".transaction").show();
   });
+
   $(".jsbtntran").click(function () {
     $(".transaction").hide();
     $(".Edit-transaction").hide();
   });
+
   $(".jscategory").click(function () {
     $(".category").show();
   });
+
   $(".jsIcon").click(function () {
     $(".category").hide();
   });
+
   // Model add
   $(".jsExpense").click(function () {
     $(".list-expense").show();
@@ -98,22 +120,22 @@ $(document).ready(function () {
   });
 
   // Add Transaction
-  $(".list-transaction").on('click', function() {
-    var spend_id = $(".spend_id").text();
-    var group_name = $("#group_name").text();
-    var money = $(".group_name").text();
+  // $(".list-transaction").on('click', function() {
+  //   var spend_id = $(".spend_id").text();
+  //   var group_name = $("#group_name").text();
+  //   var money = $(".group_name").text();
 
-    $.ajax({
-      url: "transaction_details.php",
-      method: "POST",
-      data: {
-        spend_id:spend_id,
-        group_name:group_name,
-        money:money
-      },
-      success:function(data) {
-        alert("Thanh cong");
-      }
-    });
-  });
+  //   $.ajax({
+  //     url: "transaction_details.php",
+  //     method: "POST",
+  //     data: {
+  //       spend_id:spend_id,
+  //       group_name:group_name,
+  //       money:money
+  //     },
+  //     success:function(data) {
+  //       alert("Thanh cong");
+  //     }
+  //   });
+  // });
 });
