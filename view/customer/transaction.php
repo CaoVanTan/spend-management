@@ -41,6 +41,7 @@ include_once '../../config/config.php';
                     </div>
                 </div>
             </div>
+
             <!-- Transactions -->
             <div class="thisMonth">
                 <!-- <div class="InOutflow">
@@ -60,8 +61,9 @@ include_once '../../config/config.php';
                 </div>
 
                 <?php
-                    $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id AND MONTH(spend_day) = '.$thisMonth.'";
-                    $result = mysqli_query($con, $sql);
+                // $thisMonth = 3;
+                // $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id AND MONTH(spend_day) = '.$thisMonth.'";
+                // $result = mysqli_query($con, $sql);
                 ?>
                 <div style="height: 30px; background-color: #e9ecef ;">
                 </div>
@@ -69,10 +71,10 @@ include_once '../../config/config.php';
                     <div class="item__transaction-date">
                         <div class="d-flex">
                             <div class="view-day">
-                                <span>03</span>
+                                <span>08</span>
                             </div>
                             <div class="view-month d-flex flex-column justify-content-between">
-                                <span class="view-month-day">Thứ Năm</span>
+                                <span class="view-month-day">Thứ Tư</span>
                                 <span>Tháng ba, 2022</span>
                             </div>
                         </div>
@@ -83,230 +85,50 @@ include_once '../../config/config.php';
 
                     <div class="item__transaction">
                         <?php
-                            $date = getdate();
-                            $thisMonth = $date['mon'];
-                            echo $thisMonth;
-                            $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id AND MONTH(spend_day) = '.$thisMonth.'";
-                            $result = mysqli_query($con, $sql);
+                        $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id";
+                        $result = mysqli_query($con, $sql);
 
-                            if(mysqli_num_rows($result) > 0) {
-                                while($row = mysqli_fetch_assoc($result)) {
-                                    echo '<div class="list-transaction">';
-                                    echo    '<div class="item-transation">';
-                                    echo        '<div class="item-transation-name">';
-                                    echo            '<span>'.$row['group_name'].'</span>';
-                                    echo        '</div>';
-                                    echo        '<span class="item-transation-money">'.$row['money'].'</span>';
-                                    echo    '</div>';
-                                    echo '</div>';
-                                }
+                        if(mysqli_num_rows($result) > 0) {
+                            while($row = mysqli_fetch_assoc($result)) {
+                                echo '<div class="list-transaction">';
+                                echo    '<div class="item-transation">';
+                                echo        '<div id="" class="d-none spend_id">'.$row['spend_id'].'</div>';
+                                echo        '<div class="item-transation-name">';
+                                echo            '<span id="" class="group_name">'.$row['group_name'].'</span>';
+                                echo        '</div>';
+                                echo        '<span id="" class="item-transation-money money">-'.$row['money'] .'<span class="text-decoration-underline ps-1">đ</span></span>';
+                                echo    '</div>';
+                                echo '</div>';
                             }
-
-
-                                    // $str = explode('-', $row['spend_day'])[1];
-                                    // echo "Tháng: ".$str."<hr>";
-                                    ?>
-                                    <!-- <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 35px;"> -->
-
-
-
-
+                        }
+                        ?>
+                        <!-- <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 35px;"> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="js_detail detail-container">
-        <div class="header-detail-container">
-            <div class="toolbar-detail">
-                <div class="toolbar-detail-close">
-                    <svg class="jsicon_detail" data-v-0698e127="" data-v-01db260c="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="35" viewBox="0 0 24 24" aria-labelledby="ic_cancel" version="1.1">
-                        <defs data-v-0698e127=""></defs>
-                        <g data-v-0698e127="" class="toolbar-detail-close" id="Icons/account/ic_account" stroke="none" stroke-width="1" fill="rgba(0,0,0,0.54)" fill-rule="evenodd">
-                            <rect data-v-0698e127="" id="blue-background" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="24" height="24"></rect>
-                            <polygon data-v-01db260c="" id="Shape" points="19 6.415 17.585 5 12 10.585 6.415 5 5 6.415 10.585 12 5 17.585 6.415 19 12 13.415 17.585 19 19 17.585 13.415 12" data-v-0698e127=""></polygon>
-                        </g>
-                    </svg>
-                </div>
-                <div class="d-flex align-items-center justify-content-between w-100 ms-3">
-                    <span class="toolbar-detail-title">Chi tiết về giao dịch</span>
-                    <div class="toolbar-detail-action">
-                        <button type="button" class="jsbtndletetran btn btnDE">Xóa</button>
-                        <button type="button" class="jsbtnedittran btn btnED">Sửa</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cate-note">
-            <div class="imgcar">
-                <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 50px">
-            </div>
-            <div class="cate-note-amount-content">
-                <span class="transaction-name">
-                    Vận tải
-                </span>
-                <div class="date-tran">
-                    Thứ năm, 03/03/2022
-                </div>
-                <div class="note-tran">
-                    <!-- Thức ăn -->
-                </div>
-                <div class="amount-detail ">
-                    <span>-3,000,000 ₫</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Delete transaction  -->
-    <div class="delete-transaction">
-        <div class="delete-tran">
-            <div class="header-delete">
-                <span>Xác nhận xóa giao dịch</span>
-            </div>
-            <div class="text-delete-tran">
-                <span>Xóa giao dịch này?</span>
-            </div>
-            <div class="button-delete-tran">
-                <button type="button" class="jsbtnNodelete Nodlete btn">Không</button>
-                <button type="button" class="jsbtnYesdelete Yesdelete btn">Đồng ý</button>
-            </div>
-        </div>
-    </div>
+    <?php
+    // Details Transaction
+    if(isset($_POST["spend_id"])) {
+        $spend_id = $_POST["spend_id"];
+        $group_name = $_POST["group_name"];
+        $money = $_POST["money"];
+        include_once "./transaction_details.php";
+    }
 
-    <!-- Edit transaction -->
-    <div class="Edit-transaction">
-        <div class="add-transaction">
-            <div class="header-add-tran">
-                <span>
-                    Thêm giao dịch
-                </span>
-            </div>
-            <div class="content-add-tran">
-                <!-- <div class="content-list-item">
-                    <div class="content-list-item1">
-                        <p style="margin-bottom: 0;opacity: 0.8;">Wallet</p>
-                    </div>
-                    <div class="content-list-item2">
-                        <img data-v-6bc9d4d3="" src="https://static.moneylover.me/img/icon/icon.png" style="height: 20px">
-                        <span style="padding-right: 125px;">anh</span>
-                        <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i>
-                    </div>
-                </div> -->
-                <div class="d-flex justify-content-between">
-                    <div class="jscategory content-list-item" style="cursor:pointer;">
-                        <div class="content-list-item1">
-                            <p style="margin-bottom: 0;opacity: 0.8;">Nhóm</p>
-                        </div>
-                        <div class="content-list-item2">
-                            <img data-v-6bc9d4d3="" src="https://static.moneylover.me/img/icon/icon_not_selected.png" style="height: 20px">
-                            <span class="text-input default">Chọn nhóm</span>
-                            <i class="fa-solid fa-angle-right float-end" style="opacity: 0.8; margin-top:3px"></i>
-                        </div>
-                    </div>
-                    <div class="content-list-item">
-                        <div class="content-list-item1">
-                            <p style="margin-bottom: 0;opacity: 0.8;">Số tiền</p>
-                        </div>
-                        <div class="content-list-item2">
-                            <input id="inputMoney" type="text" class="input" style="opacity: 1;" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="content-list-item" style="cursor:pointer !important;">
-                        <div class="content-list-item1">
-                            <p style="margin-bottom: 0;opacity: 0.8;">Ngày</p>
-                        </div>
-                        <div class="content-list-item2">
-                            <input value="<?php echo date("Y-m-d") ?>" required type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
-                            <!-- <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i> -->
-                        </div>
+    // Add Transaction
+    include_once "./transaction_add.php";
 
-                    </div>
-                </div>
-            </div>
-            <div class="content-list-item" style="padding: 10px; margin:0 40px; width:calc(100% - 80px)">
-                <div class="content-list-item1">
-                    <p class="m-0 w-100" style="opacity: 0.8;">Ghi chú</p>
-                </div>
-                <div class="content-list-item2">
-                    <input type="text" class="input w-100" placeholder="Ghi chú">
-                </div>
-            </div>
-            <div class="button1">
-                <div class="d-md-flex justify-content-md-end">
-                    <button class="jsbtntran btn btn-cancel" type="button">Hủy</button>
-                    <button class="btn btn-save" type="button">Lưu</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- add Transaaction -->
-    <div class="transaction">
-        <div class="add-transaction">
-            <div class="header-add-tran">
-                <span>
-                    Thêm giao dịch
-                </span>
-            </div>
-            <div class="content-add-tran">
-                <!-- <div class="content-list-item">
-                    <div class="content-list-item1">
-                        <p style="margin-bottom: 0;opacity: 0.8;">Wallet</p>
-                    </div>
-                    <div class="content-list-item2">
-                        <img data-v-6bc9d4d3="" src="https://static.moneylover.me/img/icon/icon.png" style="height: 20px">
-                        <span style="padding-right: 125px;">anh</span>
-                        <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i>
-                    </div>
-                </div> -->
-                <div class="d-flex justify-content-between">
-                    <div class="jscategory content-list-item" style="cursor:pointer;">
-                        <div class="content-list-item1">
-                            <p style="margin-bottom: 0;opacity: 0.8;">Nhóm</p>
-                        </div>
-                        <div class="content-list-item2">
-                            <img data-v-6bc9d4d3="" src="https://static.moneylover.me/img/icon/icon_not_selected.png" style="height: 20px">
-                            <span class="text-input default">Chọn nhóm</span>
-                            <i class="fa-solid fa-angle-right float-end" style="opacity: 0.8; margin-top:3px"></i>
-                        </div>
-                    </div>
-                    <div class="content-list-item">
-                        <div class="content-list-item1">
-                            <p style="margin-bottom: 0;opacity: 0.8;">Số tiền</p>
-                        </div>
-                        <div class="content-list-item2">
-                            <input id="inputMoney" type="text" class="input" style="opacity: 1;" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="content-list-item" style="cursor:pointer !important;">
-                        <div class="content-list-item1">
-                            <p style="margin-bottom: 0;opacity: 0.8;">Ngày</p>
-                        </div>
-                        <div class="content-list-item2">
-                            <input value="<?php echo date("Y-m-d") ?>" required type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
-                            <!-- <i class="fa-solid fa-angle-right" style="opacity: 0.8;"></i> -->
-                        </div>
+    // Edit Transaction
+    include_once "./transaction_delete.php";
 
-                    </div>
-                </div>
-            </div>
-            <div class="content-list-item" style="padding: 10px; margin:0 40px; width:calc(100% - 80px)">
-                <div class="content-list-item1">
-                    <p class="m-0 w-100" style="opacity: 0.8;">Ghi chú</p>
-                </div>
-                <div class="content-list-item2">
-                    <input type="text" class="input w-100" placeholder="Ghi chú">
-                </div>
-            </div>
-            <div class="button1">
-                <div class="d-md-flex justify-content-md-end">
-                    <button class="jsbtntran btn btn-cancel" type="button">Hủy</button>
-                    <button class="btn btn-save" type="button">Lưu</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    // Delete Transaction
+    include_once "./transaction_delete.php";
+    ?>
 
+    <!-- Choose groups -->
     <div class="category">
         <div class="seclect-category">
             <div class="header-category" style="padding: 25px;">

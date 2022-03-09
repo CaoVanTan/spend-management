@@ -97,34 +97,23 @@ $(document).ready(function () {
     $(".overlay__detail").hide();
   });
 
-  // Check money
-  //   function setInputFilter(textbox, inputFilter) {
-  //     [
-  //       "input",
-  //       "keydown",
-  //       "keyup",
-  //       "mousedown",
-  //       "mouseup",
-  //       "select",
-  //       "contextmenu",
-  //       "drop",
-  //     ].forEach(function (event) {
-  //       textbox.addEventListener(event, function () {
-  //         if (inputFilter(this.value)) {
-  //           this.oldValue = this.value;
-  //           this.oldSelectionStart = this.selectionStart;
-  //           this.oldSelectionEnd = this.selectionEnd;
-  //         } else if (this.hasOwnProperty("oldValue")) {
-  //           this.value = this.oldValue;
-  //           this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-  //         } else {
-  //           this.value = "";
-  //         }
-  //       });
-  //     });
-  //   }
+  // Add Transaction
+  $(".list-transaction").on('click', function() {
+    var spend_id = $(".spend_id").text();
+    var group_name = $("#group_name").text();
+    var money = $(".group_name").text();
 
-  //   setInputFilter(document.getElementById("inputMoney"), function (value) {
-  //     return /^-?\d*$/.test(value);
-  //   });
+    $.ajax({
+      url: "transaction_details.php",
+      method: "POST",
+      data: {
+        spend_id:spend_id,
+        group_name:group_name,
+        money:money
+      },
+      success:function(data) {
+        alert("Thanh cong");
+      }
+    });
+  });
 });
