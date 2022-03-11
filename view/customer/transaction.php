@@ -4,6 +4,10 @@ if (!isset($_SESSION)) {
 }
 include_once '../../partials-front/header.php';
 include_once '../../config/config.php';
+$lastmonth1 = date("Y-m", mktime(0, 0, 0, date("m")-1, date("d"), date("Y")));
+$lastmonth2 = date("Y-m", mktime(0, 0, 0, date("m")-2, date("d"), date("Y")));
+$lastmonth3 = date("d/m/Y", mktime(0, 0, 0, date("m")-2, 1, date("Y")));
+$lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m")-1, 0, date("Y")));
 ?>
 
 <section class="position-relative">
@@ -23,7 +27,7 @@ include_once '../../config/config.php';
                 <div class="header-item">
                     <ul class="nav justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link nav-link1 jslastmonth2" href="#">01/01/2022 - 31/01/2022</a>
+                            <a class="nav-link nav-link1 jslastmonth2" href="#"><?php echo $lastmonth3; echo " - "; echo $lastmonth4?></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-link1 jslastmonth1" href="#">Tháng trước</a>

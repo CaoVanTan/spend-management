@@ -186,7 +186,7 @@
                         Email: $Email,
                     },
                     success: function(response){
-                        alert(response);
+                        alert(response);ư
                     if (response == "Thanhcong") {
                         alert("Bạn đã đăng ký thành công.");
                         window.location.href = "../view/login.php";
