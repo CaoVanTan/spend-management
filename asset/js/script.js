@@ -1,17 +1,52 @@
 $(document).ready(function () {
+  if($(".jsthistmonth").attr('id') == '0')
+  {
+    $(".thisMonth").hide();
+    $(".jsmain").show();
+    console.log("aaaa");
+  }else{
+    console.log("aaaa");
+  }
   $(".jsthistmonth").click(function () {
-    $(".thisMonth").show();
-    $(".jsmain").hide();
+    if($(".jsthismonth").attr('id') == '0')
+    {
+      $(".lastMonth2").hide();
+      $(".lastMonth1").hide();
+      $(".jsmain").show();
+      console.log("aaaa");
+    }else{
+      $(".lastMonth1").hide();
+      $(".thisMonth").show();
+      $(".lastMonth2").hide();
+      $(".jsmain").hide();
+    }
   });
 
   $(".jslastmonth1").click(function () {
-    $(".thisMonth").hide();
-    $(".jsmain").show();
+    if($(".jslastmonth1").attr('id') == '0')
+    {
+      $(".lastMonth2").hide();
+      $(".thisMonth").hide();
+      $(".jsmain").show();
+      console.log("aaaa");
+    }else{
+      $(".lastMonth1").show();
+      $(".thisMonth").hide();
+      $(".lastMonth2").hide();
+      $(".jsmain").hide();
+    }
   });
 
   $(".jslastmonth2").click(function () {
-    $(".thisMonth").hide();
-    $(".jsmain").show();
+    if($(".jslastmonth2").attr('id') == '0')
+    {
+      $(".thisMonth").hide();
+      $(".jsmain").show();
+      console.log("aaaa");
+    }else{
+      $(".thisMonth").show();
+      $(".jsmain").hide();
+    }
   });
 
   $(".list-transaction").click(function () {
