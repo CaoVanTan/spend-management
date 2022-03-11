@@ -1,20 +1,23 @@
 $(document).ready(function () {
-  if($(".jsthistmonth").attr('id') == '0')
-  {
+  if ($(".jsthistmonth").attr("id") == "0") {
     $(".thisMonth").hide();
+    $(".lastMonth2").hide();
+    $(".lastMonth1").hide();
     $(".jsmain").show();
-    console.log("aaaa");
-  }else{
-    console.log("aaaa");
+  } else {
+    $(".thisMonth").show();
+    $(".lastMonth2").hide();
+    $(".lastMonth1").hide();
+    $(".jsmain").hide();
   }
+
   $(".jsthistmonth").click(function () {
-    if($(".jsthismonth").attr('id') == '0')
-    {
+    if ($(".jsthismonth").attr("id") == "0") {
+      $(".thisMonth").hide();
       $(".lastMonth2").hide();
       $(".lastMonth1").hide();
       $(".jsmain").show();
-      console.log("aaaa");
-    }else{
+    } else {
       $(".lastMonth1").hide();
       $(".thisMonth").show();
       $(".lastMonth2").hide();
@@ -23,13 +26,12 @@ $(document).ready(function () {
   });
 
   $(".jslastmonth1").click(function () {
-    if($(".jslastmonth1").attr('id') == '0')
-    {
+    if ($(".jslastmonth1").attr("id") == "0") {
+      $(".lastMonth1").hide();
       $(".lastMonth2").hide();
       $(".thisMonth").hide();
       $(".jsmain").show();
-      console.log("aaaa");
-    }else{
+    } else {
       $(".lastMonth1").show();
       $(".thisMonth").hide();
       $(".lastMonth2").hide();
@@ -38,13 +40,15 @@ $(document).ready(function () {
   });
 
   $(".jslastmonth2").click(function () {
-    if($(".jslastmonth2").attr('id') == '0')
-    {
+    if ($(".jslastmonth2").attr("id") == "0") {
+      $(".lastMonth1").hide();
+      $(".lastMonth2").hide();
       $(".thisMonth").hide();
       $(".jsmain").show();
-      console.log("aaaa");
-    }else{
-      $(".thisMonth").show();
+    } else {
+      $(".lastMonth2").show();
+      $(".thisMonth").hide();
+      $(".lastMonth1").hide();
       $(".jsmain").hide();
     }
   });
