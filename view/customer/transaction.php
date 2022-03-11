@@ -55,7 +55,7 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m")-1, 0, date("Y")));
                     <span style="color: red;">-8,000,000.00 ₫</span>
                 </div>
                 <div class="view-report">
-                    <a href="#" class="text-uppercase" style="text-decoration: none;">Xem báo cáo cho giai đoạn này</a>
+                    <a href="./report.php" class="text-uppercase" style="text-decoration: none;">Xem báo cáo cho giai đoạn này</a>
                 </div>
 
                 <div style="height: 30px; background-color: #e9ecef ;">
@@ -105,19 +105,19 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m")-1, 0, date("Y")));
     <div id="load_tran">
     </div>
 
+    <div id="load_tran2">
+    </div>
+
     <?php
 
     // Add Transaction
-    // include_once "./transaction_add.php";
+    include_once "./transaction_add.php";
 
     // Edit Transaction
-    // include_once "./transaction_delete.php";
+    // include_once "./transaction_edit.php";
 
     // Delete Transaction
     include_once "./transaction_delete.php";
-
-    // Choose groups
-    include_once "./transaction_groups.php";
     ?>
 </section>
 

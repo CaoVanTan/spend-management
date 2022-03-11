@@ -2,18 +2,18 @@
     session_start();
     include_once '../../config/config.php';
 
-    if(isset($_POST['btnAddTran'])) {
-        $userId = $_SESSION['CurrentID'];
+    if(isset($_POST['btnEditTran'])) {
+        $spend_id = $_SESSION['id_tran'];
         $tranGroup = $_POST['tranGroup'];
         $tranMoney = $_POST['tranMoney'];
         $tranDate = $_POST['tranDate'];
         $tranNote = $_POST['tranNote'];
 
-        $sql = "INSERT INTO spending (group_id, user_id, money, spend_day, note)
-                VALUES ('$tranGroup', '$userId', '$tranMoney', '$tranDate', '$tranNote')";
+        $sql = "UPDATE spending SET group_id = '$tranGroup', money = '$tranMoney', spend_day = '$tranDate',
+                note = '$tranNote' where spend_id = '$spend_id'";
         $result = mysqli_query($con, $sql);
 
-        if($result == 1) {
+        if($result) {
             header("Location: ../../view/customer/transaction.php");
         } else {
             echo "Error";
