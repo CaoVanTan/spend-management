@@ -1,104 +1,158 @@
-$(document).ready(function() {
-    $(".jsthistmonth").click(function() {
-        $(".thisMonth").show();
-        $(".jsmain").hide();
-    });
-    $(".jslastmonth").click(function() {
-        $(".thisMonth").hide();
-        $(".jsmain").show();
-    });
-    $(".jsFuture").click(function() {
-        $(".thisMonth").hide();
-        $(".jsmain").show();
-    });
-    $(".list-transaction").click(function() {
-        $(".js_detail").show();
-        $(".jscontent-main").css({ marginRight: "370px" });
-    });
-    $(".jsbtnedittran").click(function() {
-        $(".Edit-transaction").show();
-    });
-    $(".jsicon_detail").click(function() {
-        $(".js_detail").hide();
-        $(".jscontent-main").css({ marginRight: "-40px" });
-    });
-    $(".jsbtndletetran").click(function() {
-        $(".delete-transaction").show();
-    });
-    $(".jsbtnNodelete").click(function() {
-        $(".delete-transaction").hide();
-    });
-    $(".jsbtnaddtran").click(function() {
-        $(".transaction").show();
-    });
-    $(".jsbtntran").click(function() {
-        $(".transaction").hide();
-        $(".Edit-transaction").hide();
-    });
-    $(".jscategory").click(function() {
-        $(".category").show();
-    });
-    $(".jsIcon").click(function() {
-        $(".category").hide();
-    });
-    // Model add
-    $(".jsExpense").click(function() {
-        $(".list-expense").show();
-        $(".list-debt").hide();
-        $(".list-income").hide();
-    });
-    $(".jsDebt").click(function() {
-        $(".list-expense").hide();
-        $(".list-debt").show();
-        $(".list-income").hide();
-    });
-    $(".jsIncome").click(function() {
-        $(".list-expense").hide();
-        $(".list-debt").hide();
-        $(".list-income").show();
-    });
+$(document).ready(function () {
+  if($(".jsthistmonth").attr('id') == '0')
+  {
+    $(".thisMonth").hide();
+    $(".jsmain").show();
+    console.log("aaaa");
+  }else{
+    console.log("aaaa");
+  }
+  $(".jsthistmonth").click(function () {
+    if($(".jsthismonth").attr('id') == '0')
+    {
+      $(".lastMonth2").hide();
+      $(".lastMonth1").hide();
+      $(".jsmain").show();
+      console.log("aaaa");
+    }else{
+      $(".lastMonth1").hide();
+      $(".thisMonth").show();
+      $(".lastMonth2").hide();
+      $(".jsmain").hide();
+    }
+  });
 
-    // $(".btnCancelAdd").click(function() {
-    //     $(".overlay").hide();
-    //     $(".model").hide();
-    // });
-    // //model find
-    // $(".searc").click(function() {
-    //     $(".find").show();
-    // });
-    // $(".find-close").click(function() {
-    //     $(".find").hide();
-    // });
-    // // Process Login
-    // $("#btnLogin").click(function() {
-    //     var userName = $("#inputUserName").val();
-    //     var password = $("#inputPassword").val();
+  $(".jslastmonth1").click(function () {
+    if($(".jslastmonth1").attr('id') == '0')
+    {
+      $(".lastMonth2").hide();
+      $(".thisMonth").hide();
+      $(".jsmain").show();
+      console.log("aaaa");
+    }else{
+      $(".lastMonth1").show();
+      $(".thisMonth").hide();
+      $(".lastMonth2").hide();
+      $(".jsmain").hide();
+    }
+  });
 
-    //     if (userName == "" || password == "") {
-    //         alert("Bạn phải nhập tài khoản và mật khẩu!");
-    //     }
-    // });
+  $(".jslastmonth2").click(function () {
+    if($(".jslastmonth2").attr('id') == '0')
+    {
+      $(".thisMonth").hide();
+      $(".jsmain").show();
+      console.log("aaaa");
+    }else{
+      $(".thisMonth").show();
+      $(".jsmain").hide();
+    }
+  });
 
-});
+  $(".list-transaction").click(function () {
+    var spend_id = $(this).attr("id");
 
-$(document).ready(function() {
-    // Model add
-    $(".js-btn").click(function() {
-        $(".modal-wrap").show();
+    $.ajax({
+      url: "../../process/customer/process_id_tran.php",
+      type: "POST",
+      data: {
+        spend_id: spend_id,
+      },
+      success: function (response) {
+        if (response == spend_id) {
+          $("#load_tran").load("../../view/customer/transaction_details.php");
+        }
+      },
     });
-});
+    $(".jscontent-main").css({ marginRight: "690px" });
+  });
 
-$(document).ready(function() {
-    // Model add
-    $(".modal-list-category").click(function() {
-        $(".overlay__detail").show();
-    });
-});
+  $(".jsbtnedittran").click(function () {
+    $("#load_tran2").load("../../view/customer/transaction_edit.php");
+  });
 
-$(".js-modal-close").click(function() {
+  $(".jsicon_detail").click(function () {
+    $(".js_detail").hide();
+    $(".jscontent-main").css({ marginRight: "-40px" });
+  });
+
+  $(".jsbtndletetran").click(function () {
+    $(".delete-transaction").show();
+  });
+
+  $(".jsbtnNodelete").click(function () {
+    $(".delete-transaction").hide();
+  });
+
+  // Add Transaction
+  $(".jsbtnaddtran").click(function () {
+    $(".transaction").show();
+  });
+
+  $(".jsbtntran").click(function () {
+    $(".transaction").hide();
+    $(".Edit-transaction").hide();
+  });
+
+  $(".jsIcon").click(function () {
+    $(".category").hide();
+  });
+
+  // Model add
+  $(".jsExpense").click(function () {
+    $(".list-expense").show();
+    $(".list-debt").hide();
+    $(".list-income").hide();
+  });
+
+  $(".jsDebt").click(function () {
+    $(".list-expense").hide();
+    $(".list-debt").show();
+    $(".list-income").hide();
+  });
+
+  $(".jsIncome").click(function () {
+    $(".list-expense").hide();
+    $(".list-debt").hide();
+    $(".list-income").show();
+  });
+
+  // $(".btnCancelAdd").click(function() {
+  //     $(".overlay").hide();
+  //     $(".model").hide();
+  // });
+  // //model find
+  // $(".searc").click(function() {
+  //     $(".find").show();
+  // });
+  // $(".find-close").click(function() {
+  //     $(".find").hide();
+  // });
+  // // Process Login
+  // $("#btnLogin").click(function() {
+  //     var userName = $("#inputUserName").val();
+  //     var password = $("#inputPassword").val();
+
+  //     if (userName == "" || password == "") {
+  //         alert("Bạn phải nhập tài khoản và mật khẩu!");
+  //     }
+  // });
+
+  // Model add
+  $(".js-btn").click(function () {
+    $(".modal-wrap").show();
+  });
+
+  // Model add
+  $(".modal-list-category").click(function () {
+    $(".overlay__detail").show();
+  });
+
+  $(".js-modal-close").click(function () {
     $(".modal-wrap").hide();
-});
-$(".js-detail-close").click(function() {
-    $(".overlay__detail").hide();
+  });
 
+  $(".js-detail-close").click(function () {
+    $(".overlay__detail").hide();
+  });
 });

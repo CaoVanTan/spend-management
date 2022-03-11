@@ -2,7 +2,7 @@
     const HOST = 'localhost';
     const USER = 'root';
     const PASS = '';
-    const DB   = 'school_register';
+    const DB   = 'spending_management';
 
     $con = mysqli_connect(HOST, USER, PASS, DB);
 
