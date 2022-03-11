@@ -36,7 +36,7 @@ $row = mysqli_fetch_assoc($result);
         <div class="cate-note-amount-content">
             <?php
             $date = explode('-', $row['spend_day']);
-            $spend_day = $date[2] . '-' . $date[1] . '-' . $date[0];
+            $spend_day = $date[2] . '/' . $date[1] . '/' . $date[0];
             echo '<span class="transaction-name">'.$row['group_name'].'</span>
                 <div class="date-tran">'.$spend_day.'</div>
                 <div class="note-tran">'.$row['note'].'</div>

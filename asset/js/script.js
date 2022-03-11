@@ -33,7 +33,7 @@ $(document).ready(function () {
   });
 
   $(".jsbtnedittran").click(function () {
-    $(".Edit-transaction").show();
+    $("#load_tran2").load("../../view/customer/transaction_edit.php");
   });
 
   $(".jsicon_detail").click(function () {
@@ -50,59 +50,13 @@ $(document).ready(function () {
   });
 
   // Add Transaction
-  $(".btn-save").click(function () {
-    var money = $("#inputMoney").val();
-    var date = $("#inputDate").val();
-    var note = $("#inputNote").val();
-    $.ajax({
-      url: "../../process/customer/add_transaction.php",
-      type: "POST",
-      data: {
-        money: money,
-        date: date,
-        note: note,
-      },
-      success: function (response) {
-        if (response == "Success") {
-          console.log(money);
-          console.log(date);
-          console.log(note);
-        }
-      },
-    });
-  });
-
-  $(".list-item-expense").click(function () {
-    var group_id = $(this).attr("id");
-
-    $.ajax({
-      url: "../../process/customer/add_transaction.php",
-      type: "POST",
-      data: {
-        group_id: group_id,
-      },
-      success: function (response) {
-        if (response == group_id) {
-          alert(group_id);
-        } else {
-          alert(response);
-        }
-      },
-    });
-    $(".category").hide();
-  });
-
   $(".jsbtnaddtran").click(function () {
-    $("#load_tran").load("../../view/customer/transaction_add.php");
+    $(".transaction").show();
   });
 
   $(".jsbtntran").click(function () {
     $(".transaction").hide();
     $(".Edit-transaction").hide();
-  });
-
-  $(".jscategory").click(function () {
-    $(".category").show();
   });
 
   $(".jsIcon").click(function () {
