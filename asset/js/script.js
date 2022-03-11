@@ -79,8 +79,9 @@ $(document).ready(function () {
   //     }
   // });
 
+
   // Model add
-  $(".js_btn").click(function () {
+  $(".js-btn").click(function () {
     $(".js-modal-wrap").show();
   });
 

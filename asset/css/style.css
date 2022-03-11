@@ -950,12 +950,13 @@ a:hover {
   display: flex;
   justify-content: center;
   height: 100%;
+  padding-left: 100px;
 }
 
 .report {
   background-color: #fff;
   width: 70%;
-  margin-top: 36px;
+  margin-top: 120px;
   border-radius: 4px;
 }
 
@@ -967,7 +968,7 @@ a:hover {
 
 .report__bottom {
   align-items: center;
-  padding: 40px 40px;
+  padding: 20px 40px;
   border-top: 1px solid #e0e0e0;
 }
 
@@ -1005,10 +1006,11 @@ a:hover {
   align-items: center;
   justify-content: center;
   display: none;
+  padding-left: 100px;
 }
 
 .modal-container {
-  width: 900px;
+  width: 658px;
   height: 600px;
   margin: 117px auto;
   position: relative;
@@ -1112,6 +1114,7 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
+  padding-left: 100px;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
@@ -1121,7 +1124,7 @@ a:hover {
 }
 
 .modal-details {
-  width: 600px;
+  width: 458px;
   height: 300px;
   margin: 117px auto;
   position: relative;
