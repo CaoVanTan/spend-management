@@ -8,7 +8,9 @@
         </div>
         <div class="button-delete-tran">
             <button type="button" class="jsbtnNodelete Nodlete btn">Không</button>
-            <button type="button" class="jsbtnYesdelete Yesdelete btn">Đồng ý</button>
+            <a href="../../process/customer/delete_transaction.php" class="jsbtnYesdelete Yesdelete btn">Đồng ý</a>
         </div>
     </div>
 </div>
+
+<script src="../../asset/js/script.js"></script>

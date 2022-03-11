@@ -16,8 +16,19 @@ $(document).ready(function () {
 
   $(".list-transaction").click(function () {
     var spend_id = $(this).attr("id");
-    $(".transaction-id").text(spend_id);
-    $(".js_detail").show();
+
+    $.ajax({
+      url: "../../process/customer/process_id_tran.php",
+      type: "POST",
+      data: {
+        spend_id: spend_id,
+      },
+      success: function (response) {
+        if (response == spend_id) {
+          $("#load_tran").load("../../view/customer/transaction_details.php");
+        }
+      },
+    });
     $(".jscontent-main").css({ marginRight: "690px" });
   });
 
@@ -38,8 +49,51 @@ $(document).ready(function () {
     $(".delete-transaction").hide();
   });
 
+  // Add Transaction
+  $(".btn-save").click(function () {
+    var money = $("#inputMoney").val();
+    var date = $("#inputDate").val();
+    var note = $("#inputNote").val();
+    $.ajax({
+      url: "../../process/customer/add_transaction.php",
+      type: "POST",
+      data: {
+        money: money,
+        date: date,
+        note: note,
+      },
+      success: function (response) {
+        if (response == "Success") {
+          console.log(money);
+          console.log(date);
+          console.log(note);
+        }
+      },
+    });
+  });
+
+  $(".list-item-expense").click(function () {
+    var group_id = $(this).attr("id");
+
+    $.ajax({
+      url: "../../process/customer/add_transaction.php",
+      type: "POST",
+      data: {
+        group_id: group_id,
+      },
+      success: function (response) {
+        if (response == group_id) {
+          alert(group_id);
+        } else {
+          alert(response);
+        }
+      },
+    });
+    $(".category").hide();
+  });
+
   $(".jsbtnaddtran").click(function () {
-    $(".transaction").show();
+    $("#load_tran").load("../../view/customer/transaction_add.php");
   });
 
   $(".jsbtntran").click(function () {
@@ -61,11 +115,13 @@ $(document).ready(function () {
     $(".list-debt").hide();
     $(".list-income").hide();
   });
+
   $(".jsDebt").click(function () {
     $(".list-expense").hide();
     $(".list-debt").show();
     $(".list-income").hide();
   });
+
   $(".jsIncome").click(function () {
     $(".list-expense").hide();
     $(".list-debt").hide();
@@ -110,24 +166,4 @@ $(document).ready(function () {
   $(".js-detail-close").click(function () {
     $(".overlay__detail").hide();
   });
-
-  // Add Transaction
-  // $(".list-transaction").on('click', function() {
-  //   var spend_id = $(".spend_id").text();
-  //   var group_name = $("#group_name").text();
-  //   var money = $(".group_name").text();
-
-  //   $.ajax({
-  //     url: "transaction_details.php",
-  //     method: "POST",
-  //     data: {
-  //       spend_id:spend_id,
-  //       group_name:group_name,
-  //       money:money
-  //     },
-  //     success:function(data) {
-  //       alert("Thanh cong");
-  //     }
-  //   });
-  // });
 });

@@ -1,5 +1,5 @@
 <div class="transaction">
-    <div class="add-transaction">
+    <form  class="add-transaction">
         <div class="header-add-tran">
             <span>
                 Thêm giao dịch
@@ -22,7 +22,7 @@
                         <p style="margin-bottom: 0;opacity: 0.8;">Số tiền</p>
                     </div>
                     <div class="content-list-item2">
-                        <input id="inputMoney" type="text" class="input" style="opacity: 1;" placeholder="0">
+                        <input name="tranMoney" id="inputMoney" required type="text" class="input" style="opacity: 1;" placeholder="0">
                     </div>
                 </div>
                 <div class="content-list-item" style="cursor:pointer !important;">
@@ -30,7 +30,7 @@
                         <p style="margin-bottom: 0;opacity: 0.8;">Ngày</p>
                     </div>
                     <div class="content-list-item2">
-                        <input value="<?php echo date("Y-m-d") ?>" required type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
+                        <input name="tranDate" id="inputDate" value="<?php echo date("Y-m-d") ?>" required type="date" class="w-100 text-uppercase" style="border: none; outline: none; cursor:pointer !important;">
                     </div>
                 </div>
             </div>
@@ -40,14 +40,16 @@
                 <p class="m-0 w-100" style="opacity: 0.8;">Ghi chú</p>
             </div>
             <div class="content-list-item2">
-                <input type="text" class="input w-100" placeholder="Ghi chú">
+                <input name="tranNote" id="inputNote" type="text" class="input w-100" placeholder="Ghi chú">
             </div>
         </div>
         <div class="button1">
             <div class="d-md-flex justify-content-md-end">
                 <button class="jsbtntran btn btn-cancel" type="button">Hủy</button>
-                <button class="btn btn-save" type="button">Lưu</button>
+                <button name="btnAddTran" class="btn btn-save" type="button">Lưu</button>
             </div>
         </div>
-    </div>
+    </form>
 </div>
+
+<script src="../../asset/js/script.js"></script>

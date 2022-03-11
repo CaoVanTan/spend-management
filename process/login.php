@@ -14,6 +14,7 @@
             if (password_verify($pass,$pass_hash)) {
                 $_SESSION['CurrentUser'] = $username;
                 $_SESSION['CurrentID'] = $userid;
+                $_SESSION["id_tran"] = 0;
                 echo "Thanhcong";
             }else {
                 mysqli_close($con);
