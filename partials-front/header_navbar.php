@@ -12,30 +12,27 @@
             <i class="fa-solid fa-xmark"></i>
         </label>
 
-
         <ul class="menu__list">
             <div class="menu-wrap">
                 <i class="fa-solid fa-user"></i>
                 <li class="menu__list-item">
-                    <a href="" class="menu__list-link">Quản lý tài khoản</a>
+                    <a href="#" class="menu__list-link">Quản lý tài khoản</a>
                 </li>
             </div>
             <div class="menu-wrap">
                 <i class="fa-brands fa-blackberry"></i>
                 <li class="menu__list-item">
-                    <a href="" class="menu__list-link">Nhóm</a>
+                    <a href="#" class="menu__list-link">Nhóm</a>
                 </li>
             </div>
             <div class="menu-wrap">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <li class="menu__list-item">
-                    <a href="" class="menu__list-link">Đăng xuất</a>
+                    <a href="../../process/logout.php" class="menu__list-link">Đăng xuất</a>
                 </li>
             </div>
         </ul>
     </div>
-
-
 
     <div class="list-item">
         <a href="./transaction.php" class="list__item-link">

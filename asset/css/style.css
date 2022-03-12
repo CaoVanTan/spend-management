@@ -782,7 +782,7 @@ a:hover {
 /* CSS LOGIN */
 
 .img-logo {
-  width: 250px;
+  width: 200px;
 }
 
 .main__login {
@@ -1176,21 +1176,26 @@ a:hover {
 .menu-wrap {
   display: flex;
   align-items: center;
-  padding: 12px 18px;
+  padding: 0px 18px;
   border-top: 1px solid #ccc;
   transition: ease-in 1s ease-out;
 }
-.menu-wrap:hover {
+.menu-wrap:hover, .menu-wrap:hover li a {
   background-color:rgb(231, 231, 231);
   color: var(--primary-color);
+  cursor: pointer;
+}
+.menu__list-item {
+  width: 100%;
 }
 .menu__list-link {
   /* border-top: 1px solid #ccc; */
+  width: 100%;
   text-align: start;
   display: block;
   text-decoration: none;
   color: #000;
-  padding: 8px 30px;
+  padding: 15px 30px;
 }
 .close-icon:hover {
   cursor: pointer;

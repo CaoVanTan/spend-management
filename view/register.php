@@ -1,13 +1,13 @@
 <?php include_once '../partials-front/header.php'?>
 <body>
-    
+
     <div class="main__login">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div>
-                        <img src="../asset//img/logo_transparent.png" alt="" class="img-logo">
-                    </div>
+                <div class="col-md-12 my-5">
+                    <a href="./index.php">
+                        <img src="../asset//img/logo.png" alt="" class="img-logo">
+                    </a>
                 </div>
             </div>
         </div>
