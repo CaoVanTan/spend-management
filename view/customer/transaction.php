@@ -153,6 +153,7 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m")-1, 0, date("Y")));
                         }
                  ?> 
             </div>
+
             <div class="lastMonth1">
                 <div class="InOutflow">
                     <span>Tổng số tiền chi tiêu</span>
@@ -228,6 +229,9 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m")-1, 0, date("Y")));
                         }
                  ?> 
             </div>
+
+
+            
             <div class="lastMonth2">
                 <div class="InOutflow">
                     <span>Tổng số tiền chi tiêu</span>

@@ -2,10 +2,13 @@ $(document).ready(function () {
   if($(".jsthistmonth").attr('id') == '0')
   {
     $(".thisMonth").hide();
+    $(".lastMonth1").hide();
+    $(".lastMonth2").hide();
     $(".jsmain").show();
-    console.log("aaaa");
   }else{
-    console.log("aaaa");
+    $(".lastMonth1").hide();
+    $(".lastMonth2").hide();
+    $(".thisMonth").show();
   }
   $(".jsthistmonth").click(function () {
     if($(".jsthismonth").attr('id') == '0')
@@ -13,7 +16,6 @@ $(document).ready(function () {
       $(".lastMonth2").hide();
       $(".lastMonth1").hide();
       $(".jsmain").show();
-      console.log("aaaa");
     }else{
       $(".lastMonth1").hide();
       $(".thisMonth").show();
@@ -28,7 +30,6 @@ $(document).ready(function () {
       $(".lastMonth2").hide();
       $(".thisMonth").hide();
       $(".jsmain").show();
-      console.log("aaaa");
     }else{
       $(".lastMonth1").show();
       $(".thisMonth").hide();
@@ -42,7 +43,6 @@ $(document).ready(function () {
     {
       $(".thisMonth").hide();
       $(".jsmain").show();
-      console.log("aaaa");
     }else{
       $(".thisMonth").show();
       $(".jsmain").hide();
