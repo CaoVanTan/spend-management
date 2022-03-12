@@ -23,14 +23,14 @@
                         </div>
                         <div class="form__body">
                             <div class="account fl">
-                                <form action="" class="form">
-                                    <input class="input__text" required type="text" placeholder="Tên đăng nhập">
-                                    <input class="input__text" required type="password" placeholder="Mật khẩu">
+                                <div class="form">
+                                    <input class="input__text" id="Username" required type="text" placeholder="Tên đăng nhập">
+                                    <input class="input__text" id="Pass"required type="password" placeholder="Mật khẩu">
                                     <div class="form__forgot">
                                         <a href="#" class="form__forgot-link">Quên mật khẩu?</a>
                                     </div>
-                                    <button class="form__btn">ĐĂNG NHẬP</button>
-                                </form>
+                                    <button class="form__btn" id="Login">ĐĂNG NHẬP</button>
+                                </div>
                                 <div class="form__suggest">
                                     <p class="form__suggest-text">Bạn không có tài khoản?
                                         <a href="./register.php" class="form__suggest-text-link">Đăng ký</a>
@@ -65,7 +65,6 @@
     $('#Login').click(function() {
         $Username = $("#Username").val();
         $Pass = $("#Pass").val();
-        alert($Username + $Pass);
         if ($Username == "" || $Pass == "") {
             alert("Vui lòng nhập đầy đủ tài khoản và mật khẩu !!");
         } else {

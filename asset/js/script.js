@@ -50,13 +50,76 @@ $(document).ready(function () {
       $(".jsmain").hide();
     }
   });
+
+  
   $(".list-transaction").click(function () {
-    $(".js_detail").show();
-    $(".jscontent-main").css({ marginRight: "690px" });
+    var spend_id = $(this).attr("id");
+
+    $.ajax({
+      url: "../../process/customer/process_id_tran.php",
+      type: "POST",
+      data: {
+        spend_id: spend_id,
+      },
+      success: function (response) {
+        if (response == spend_id) {
+          $("#load_tran").load("../../view/customer/transaction_details.php");
+          $(".jscontent-main").css({ marginRight: "690px" });
+        }
+      }
+    });
   });
-  $(".jsbtnedittran").click(function () {
-    $(".Edit-transaction").show();
+   
+
+
+  
+  // Add Transaction
+  $(".btn-save").click(function () {
+    var money = $("#inputMoney").val();
+    var date = $("#inputDate").val();
+    var note = $("#inputNote").val();
+    $.ajax({
+      url: "../../process/customer/add_transaction.php",
+      type: "POST",
+      data: {
+        money: money,
+        date: date,
+        note: note,
+      },
+      success: function (response) {
+        if (response == "Success") {
+          console.log(money);
+          console.log(date);
+          console.log(note);
+        }
+      },
+    });
   });
+
+  $(".list-item-expense").click(function () {
+    var group_id = $(this).attr("id");
+
+    $.ajax({
+      url: "../../process/customer/add_transaction.php",
+      type: "POST",
+      data: {
+        group_id: group_id,
+      },
+      success: function (response) {
+        if (response == group_id) {
+          alert(group_id);
+        } else {
+          alert(response);
+        }
+      },
+    });
+    $(".category").hide();
+  });
+
+  $(".jsbtnaddtran").click(function () {
+    $("#load_tran").load("../../view/customer/transaction_add.php");
+  });
+
   $(".jsicon_detail").click(function () {
     $(".js_detail").hide();
     $(".jscontent-main").css({ marginRight: "-40px" });
