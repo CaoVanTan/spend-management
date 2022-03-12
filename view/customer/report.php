@@ -67,7 +67,7 @@ include_once '../../partials-front/header.php';
 
 
     <!-- Modal -->
-    <div class="modal-wrap">
+    <div class="js-modal-wrap">
         <div class="modal-container">
             <div class="modal-top bb">
                 <div class="modal-close js-modal-close">

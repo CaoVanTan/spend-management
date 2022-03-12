@@ -48,14 +48,14 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <h1 class="wrap__text text-64">Cách đơn giản nhất <br/> để quản lí tài chính cá nhân</h1>
-                            <div class="button">
+                            <!-- <div class="button">
                                 <button class="btnn">
                                     <a href="" class="btn__link">Phiên bản web</a>
                                 </button>
                                 <button class="btnn">
                                     <a href="" class="btn__link">Tải về miễn phí</a>
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
