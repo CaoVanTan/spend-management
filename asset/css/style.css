@@ -404,7 +404,7 @@ ul {
 }
 
 .Edit-transaction {
-  display: none;
+  /* display: none; */
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);

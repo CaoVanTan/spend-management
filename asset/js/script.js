@@ -51,7 +51,6 @@ $(document).ready(function () {
     }
   });
 
-  
   $(".list-transaction").click(function () {
     var spend_id = $(this).attr("id");
 
@@ -66,73 +65,32 @@ $(document).ready(function () {
           $("#load_tran").load("../../view/customer/transaction_details.php");
           $(".jscontent-main").css({ marginRight: "690px" });
         }
-      }
-    });
-  });
-   
-
-
-  
-  // Add Transaction
-  $(".btn-save").click(function () {
-    var money = $("#inputMoney").val();
-    var date = $("#inputDate").val();
-    var note = $("#inputNote").val();
-    $.ajax({
-      url: "../../process/customer/add_transaction.php",
-      type: "POST",
-      data: {
-        money: money,
-        date: date,
-        note: note,
-      },
-      success: function (response) {
-        if (response == "Success") {
-          console.log(money);
-          console.log(date);
-          console.log(note);
-        }
       },
     });
   });
 
-  $(".list-item-expense").click(function () {
-    var group_id = $(this).attr("id");
-
-    $.ajax({
-      url: "../../process/customer/add_transaction.php",
-      type: "POST",
-      data: {
-        group_id: group_id,
-      },
-      success: function (response) {
-        if (response == group_id) {
-          alert(group_id);
-        } else {
-          alert(response);
-        }
-      },
-    });
-    $(".category").hide();
-  });
-
-  $(".jsbtnaddtran").click(function () {
-    $("#load_tran").load("../../view/customer/transaction_add.php");
+  $(".jsbtnedittran").click(function () {
+    $("#load_tran2").load("../../view/customer/transaction_edit.php");
   });
 
   $(".jsicon_detail").click(function () {
     $(".js_detail").hide();
     $(".jscontent-main").css({ marginRight: "-40px" });
   });
+
   $(".jsbtndletetran").click(function () {
     $(".delete-transaction").show();
   });
+
   $(".jsbtnNodelete").click(function () {
     $(".delete-transaction").hide();
   });
+
+  // Add Transaction
   $(".jsbtnaddtran").click(function () {
     $(".transaction").show();
   });
+
   $(".jsbtntran").click(function () {
     $(".transaction").hide();
     $(".Edit-transaction").hide();
@@ -143,6 +101,7 @@ $(document).ready(function () {
   $(".jsIcon").click(function () {
     $(".category").hide();
   });
+
   // Model add
   $(".jsExpense").click(function () {
     $(".list-expense").show();
@@ -180,7 +139,6 @@ $(document).ready(function () {
   //         alert("Bạn phải nhập tài khoản và mật khẩu!");
   //     }
   // });
-
 
   // Model add
   $(".js-btn").click(function () {
