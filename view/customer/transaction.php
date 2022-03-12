@@ -79,7 +79,6 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m") - 1, 0, date("Y")));
             </div>
 
             <!-- Transactions -->
-
             <?php
             include_once "./transaction_this_month.php";
             include_once "./transaction_last_month.php";

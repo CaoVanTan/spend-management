@@ -22,12 +22,12 @@
                         </div>
                         <div class="form__body">
                             <div class="account fl">
-                                <form action="" class="form">
-                                    <input class="input__text" required type="email" placeholder="Email">
-                                    <input class="input__text" required type="text" placeholder="Tên đăng nhập">
-                                    <input class="input__text" required type="password" placeholder="Mật khẩu">
-                                    <button class="form__btn mt-2">ĐĂNG KÝ</button>
-                                </form>
+                                <div class="form">
+                                    <input class="input__text" type="email" id = "reg_email" placeholder="Email">
+                                    <input class="input__text" type="text" id="reg_username" placeholder="Tên đăng nhập">
+                                    <input class="input__text" type="password" id="reg_pass"placeholder="Mật khẩu">
+                                    <button class="form__btn mt-2" id="reg">ĐĂNG KÝ</button>
+                                </div>
                                 <div class="form__suggest">
                                     <p class="form__suggest-text">Bạn đã có tài khoản?
                                         <a href="./login.php" class="form__suggest-text-link">Đăng nhập</a>
@@ -48,4 +48,47 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+        $('#reg').click(function(){
+            $Username = $("#reg_username").val();
+            $Pass = $("#reg_pass").val();
+            $Email =$('#reg_email').val();
+            if ($Username == "" || $Pass == "" || $Email == "") {
+                alert("Vui lòng nhập đầy đủ thông tin !!");
+            } else if ($Email.indexOf("@") == -1) {
+                alert("Email phải có @.")
+            }else
+            {
+                $.ajax({
+                    url:"../process/register.php",
+                    type: "POST",
+                    data:{
+                        Username: $Username,
+                        Pass: $Pass,
+                        Email: $Email,
+                    },
+                    success: function(response){
+                        alert(response);
+                    if (response == "Thanhcong") {
+                        alert("Bạn đã đăng ký thành công.");
+                        window.location.href = "../view/login.php";
+                    }else if (response == "TK") {
+                        alert("Tài khoản của bạn đã bị trùng.");
+                    } else if (response == "Email") {
+                        alert("Email của bạn đã bị trùng.");
+                    } else if (response == "Sai") {
+                        alert("Hệ thống lỗi vui lòng thử lại.");
+                    }else{
+                        alert("Hệ thống lỗi vui lòng thử lại.");
+                    }
+                     
+                    }
+                    
+                })
+
+            }
+        });
+
+</script>
 <?php include '../partials-front/footer.php' ?>
