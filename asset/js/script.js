@@ -1,6 +1,7 @@
 $(document).ready(function () {
   if ($(".jsthistmonth").attr("id") == "0") {
     $(".thisMonth").hide();
+
     $(".lastMonth2").hide();
     $(".lastMonth1").hide();
     $(".jsmain").show();
@@ -17,6 +18,7 @@ $(document).ready(function () {
       $(".lastMonth2").hide();
       $(".lastMonth1").hide();
       $(".jsmain").show();
+
     } else {
       $(".lastMonth1").hide();
       $(".thisMonth").show();
@@ -30,6 +32,7 @@ $(document).ready(function () {
       $(".lastMonth2").hide();
       $(".thisMonth").hide();
       $(".jsmain").show();
+
     } else {
       $(".lastMonth1").show();
       $(".thisMonth").hide();
@@ -43,6 +46,7 @@ $(document).ready(function () {
       $(".lastMonth2").hide();
       $(".thisMonth").hide();
       $(".jsmain").show();
+
     } else {
       $(".lastMonth2").show();
       $(".thisMonth").hide();
