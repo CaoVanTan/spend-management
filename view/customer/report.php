@@ -26,9 +26,6 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
         $Ngay[$i - 1] = $i;
     }
 }
-// print_r($TongTien);
-// echo '</br>';
-// print_r($Ngay);
 ?>
 <section>
     <div class="container">
@@ -48,30 +45,8 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
                     <h5>Thu nhập</h5>
                 </div>
             </div>
-            <div class="report__chart">
-                <canvas id="myChart" style="width:80%; padding:68px"></canvas>
-                <script>
-                    new Chart("myChart", {
-                        type: "bar",
-                        data: {
-                            labels: <?php echo json_encode($Ngay) ?>,
-                            yValueFormatString: "#,##0.## đồng",
-                            datasets: [{
-                                backgroundColor: '#45F143',
-                                data: <?php echo json_encode($TongTien) ?>,
-                            }]
-                        },
-                        options: {
-                            legend: {
-                                display: false
-                            },
-                            title: {
-                                display: false
-                            }
-                        }
-                    });
-                </script>
-            </div>
+            <div class="load_report">  </div>
+
             <div class="js-btn report__bottom flex">
                 <div class="report__time">
                     <p>Thứ tư 02/03/2022</p>
