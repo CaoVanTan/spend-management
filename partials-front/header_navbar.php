@@ -8,9 +8,9 @@ include 'header.php';
     </label>
 
     <input type="checkbox" class="check-menu" id="check" hidden>
-    <label for="check" class="menu-overlay"></label>
+    <!--<label for="check" class="menu-overlay"></label>
 
-    <!-- <div for="check" class="menu">
+     <div for="check" class="menu">
         <label for="check" class="close-icon">
             <i class="fa-solid fa-xmark"></i>
         </label>
