@@ -40,41 +40,12 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
     <?php
     include_once '../../partials-front/header_report.php';
     ?>
-
-    <div class="main__report">
-        <div class="report">
-            <div class="report__top flex">
-                <div class="report__text">
-                    <h5>Thu nhập</h5>
-                </div>
-            </div>
-            <div class="report__chart">
-                <canvas id="myChart" style="width:80%; padding:68px"></canvas>
-                <script>
-                    new Chart("myChart", {
-                        type: "bar",
-                        data: {
-                            labels: <?php echo json_encode($Ngay) ?>,
-                            yValueFormatString: "#,##0.## đồng",
-                            datasets: [{
-                                backgroundColor: '#45F143',
-                                data: <?php echo json_encode($TongTien) ?>,
-                            }]
-                        },
-                        options: {
-                            legend: {
-                                display: false
-                            },
-                            title: {
-                                display: false
-                            }
-                        }
-                    });
-                </script>
-            </div>
-            <div class="js-btn report__bottom flex">
-                <div class="report__time">
-                    <p>Thứ tư 02/03/2022</p>
+    <div class="overlay__select-month js-overlay__select-month">
+        <div class="wrapper js-select-month-wrapper">
+            <div class="select-month-wrap">
+                <div class="box-heading bd">
+                    <h5 class="title-month">Chọn Tháng</h5>
+                    <i class="fa-solid fa-xmark js-close"></i>
                 </div>
                 <div class="box-month bd">
                     <div class="box-month-select">
@@ -137,5 +108,6 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
             </div>
         </div>
     </div>
+
 </section>
 <?php include '../../partials-front/footer.php' ?>

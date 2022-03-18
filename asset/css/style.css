@@ -1385,7 +1385,6 @@ a:hover {
 .select-month {
   position: absolute;
   margin-left: 40%;
-  /* display: none; */
 }
 .select-month__wrap {
   display:flex;
