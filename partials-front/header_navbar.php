@@ -8,9 +8,9 @@ include 'header.php';
     </label>
 
     <input type="checkbox" class="check-menu" id="check" hidden>
-    <label for="check" class="menu-overlay"></label>
+    <!--<label for="check" class="menu-overlay"></label>
 
-    <div for="check" class="menu">
+     <div for="check" class="menu">
         <label for="check" class="close-icon">
             <i class="fa-solid fa-xmark"></i>
         </label>
@@ -35,7 +35,7 @@ include 'header.php';
                 </li>
             </div>
         </ul>
-    </div>
+    </div> -->
 
     <div class="list-item">
         <a href="./transaction.php" class="list__item-link">
@@ -71,7 +71,29 @@ include 'header.php';
             <span>Báo cáo</span>
         </a>
     </div>
-    <!-- <input type="checkbox" class="check" id="check"> -->
-    
+    <div class="list-item">
+        <a href="../group/group.php" class="list__item-link">
+            <span>
+            <i class="fa-brands fa-blackberry" style = "font-size: 20px;opacity: 0.6;font-weight: 300;"></i>
+            </span>
+            <span>Nhóm</span>
+        </a>
+    </div>
+    <div class="list-item">
+        <a href="#" class="list__item-link">
+            <span>
+            <i class="fa-solid fa-user" style = "font-size: 20px;opacity: 0.6;font-weight: 300;"></i>
+            </span>
+            <span>Quản lý tài khoản</span>
+        </a>
+    </div>
+    <div class="list-item" style = "margin-top: 145px;">
+        <a href="#" class="list__item-link">
+            <span>
+            <i class="fa-solid fa-right-from-bracket" style = "font-size: 20px;opacity: 0.6;"></i>
+            </span>
+            <span>Đăng xuất</span>
+        </a>
+    </div>
 </div>
 <?php include('footer.php') ?>
