@@ -10,7 +10,7 @@ include 'header.php';
     <input type="checkbox" class="check-menu" id="check" hidden>
     <label for="check" class="menu-overlay"></label>
 
-    <div for="check" class="menu">
+    <!-- <div for="check" class="menu">
         <label for="check" class="close-icon">
             <i class="fa-solid fa-xmark"></i>
         </label>
@@ -35,7 +35,7 @@ include 'header.php';
                 </li>
             </div>
         </ul>
-    </div>
+    </div> -->
 
     <div class="list-item">
         <a href="./transaction.php" class="list__item-link">
