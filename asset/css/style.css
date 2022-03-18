@@ -29,11 +29,6 @@ ul {
     margin: 0px;
 }
 
-.form-select:focus {
-    box-shadow: none;
-    border: 1px solid #ced4da;
-}
-
 
 /* css header-left */
 
@@ -111,7 +106,7 @@ ul {
 }
 
 .header-content {
-    height: 60px;
+    height: 53px;
 }
 
 .header-item {
@@ -215,14 +210,6 @@ ul {
     margin: 10px 0 10px 15px;
 }
 
-.list-transaction {
-    width: 80%;
-    height: 50px;
-    margin-left: 12%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .view-month-day {
     font-weight: 500;
 }
@@ -273,7 +260,6 @@ ul {
     right: 1%;
     box-shadow: 0 3px 7px 0 rgb(0 0 0 / 33%);
     border-radius: 5px;
-    /* display: none; */
 }
 
 .header-detail-container {
@@ -436,7 +422,7 @@ ul {
 }
 
 .button1 {
-    padding: 30px 40px 20px;
+    padding: 30px 40px 15px;
 }
 
 .btn-cancel {
@@ -563,12 +549,13 @@ ul {
 
 .list-expense {
     /* min-height: 200px; */
-    margin: 16px 50px;
+    /* margin: 16px 50px; */
+    /* margin: 0px 22px; */
 }
 
 .list-item-expense {
     padding: 10px 10px;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
 }
 
 .list-item-expense:hover {
@@ -807,8 +794,11 @@ a:hover {
 
 /* CSS LOGIN */
 
+.img-logo {
+    width: 200px;
+}
+
 .main__login {
-    padding: 50px 50px 40px;
     justify-content: center;
     background-color: #00710f;
 }
@@ -833,7 +823,7 @@ a:hover {
 }
 
 .container__login {
-    width: 90%;
+    width: 68%;
 }
 
 .socials {
@@ -886,8 +876,8 @@ a:hover {
 }
 
 .form {
-    border-left: 2px solid #e0e0e0;
-    padding-left: 15px;
+    /* border-left: 2px solid #e0e0e0; */
+    /* padding-left: 15px; */
     margin-top: 20px;
 }
 
@@ -974,12 +964,13 @@ a:hover {
     display: flex;
     justify-content: center;
     height: 100%;
+    padding-left: 100px;
 }
 
 .report {
     background-color: #fff;
     width: 70%;
-    margin-top: 36px;
+    margin-top: 120px;
     border-radius: 4px;
 }
 
@@ -991,7 +982,7 @@ a:hover {
 
 .report__bottom {
     align-items: center;
-    padding: 40px 40px;
+    padding: 20px 40px;
     border-top: 1px solid #e0e0e0;
 }
 
@@ -1019,7 +1010,7 @@ a:hover {
 
 /* Modal */
 
-.modal-wrap {
+.js-modal-wrap {
     display: flex;
     position: fixed;
     top: 0;
@@ -1030,16 +1021,17 @@ a:hover {
     align-items: center;
     justify-content: center;
     display: none;
+    padding-left: 100px;
 }
 
 .modal-container {
-    width: 900px;
+    width: 658px;
     height: 600px;
     margin: 117px auto;
     position: relative;
     background-color: #f4f4f4;
     border-radius: 4px;
-    display: none;
+    /* display: none; */
 }
 
 .bb {
@@ -1066,7 +1058,7 @@ a:hover {
 }
 
 .modal-item {
-    padding: 12px 20px;
+    padding: 12px 46px;
     background-color: #fff;
     margin-top: 40px;
     align-items: center;
@@ -1137,6 +1129,7 @@ a:hover {
     position: fixed;
     top: 0;
     left: 0;
+    padding-left: 100px;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
@@ -1146,7 +1139,7 @@ a:hover {
 }
 
 .modal-details {
-    width: 600px;
+    width: 458px;
     height: 300px;
     margin: 117px auto;
     position: relative;
@@ -1199,13 +1192,33 @@ a:hover {
     border-bottom: 1px solid #ccc;
 }
 
-.menu__list-link {
+.menu-wrap {
+    display: flex;
+    align-items: center;
+    padding: 0px 18px;
     border-top: 1px solid #ccc;
+    transition: ease-in 1s ease-out;
+}
+
+.menu-wrap:hover,
+.menu-wrap:hover li a {
+    background-color: rgb(231, 231, 231);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.menu__list-item {
+    width: 100%;
+}
+
+.menu__list-link {
+    /* border-top: 1px solid #ccc; */
+    width: 100%;
     text-align: start;
     display: block;
     text-decoration: none;
     color: #000;
-    padding: 8px 30px;
+    padding: 15px 30px;
 }
 
 .close-icon:hover {
@@ -1225,6 +1238,18 @@ a:hover {
     display: none;
 }
 
+.icon-bar {
+    height: 80px;
+    line-height: 80px;
+    display: block;
+    font-size: 24px;
+}
+
+.icon-bar:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.04);
+}
+
 
 /* animation */
 
@@ -1235,4 +1260,129 @@ a:hover {
     to {
         opacity: 1;
     }
+}
+
+
+/* css group */
+
+.header-group {
+    padding-right: 40px;
+    padding-left: 40px;
+    /* width: 106%; */
+    /* width: 275px; */
+    width: 100%;
+    margin-left: 63px;
+    height: 80px;
+    width: calc(100% - 100px);
+    z-index: 1;
+}
+
+.header-icon-group {
+    padding: 17px 0px;
+    padding-right: 50px;
+    padding-left: 2px;
+    display: inline-flex;
+}
+
+.header-text-group {
+    line-height: 50px;
+    margin-top: 15px;
+}
+
+.main-group {
+    height: 545px;
+    background-color: #ccc;
+}
+
+.main-group-item {
+    position: fixed;
+    width: 35%;
+    min-height: 138px;
+    background-color: #fff;
+    top: 18%;
+    right: 30%;
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 33%);
+    border-radius: 10px;
+}
+
+.header-main-group {
+    height: 40px;
+    padding: 9px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #e9ecef;
+}
+
+.group-container {
+    position: fixed;
+    width: 50%;
+    background-color: #fff;
+    top: 110px;
+    right: 5%;
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 33%);
+    border-radius: 5px;
+    display: none;
+}
+
+.add-group {
+    position: fixed;
+    width: 100%;
+    height: 640px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.add-group-item {
+    position: fixed;
+    width: 45%;
+    min-height: 200px;
+    top: 20%;
+    left: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.header-add-group {
+    height: 50px;
+    padding: 13px 0px;
+    padding-left: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid;
+}
+
+.checkbox-group {
+    height: 50px;
+    padding: 13px 0px;
+    padding-left: 55px;
+}
+
+.name-add-group {
+    height: 70px;
+    width: 90%;
+    /* background-color: aliceblue; */
+    border: 1px solid #ccc;
+    margin-left: 30px;
+    border-radius: 10px;
+    margin-top: 25px
+}
+
+.edit-group {
+    position: fixed;
+    width: 100%;
+    height: 640px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.delete-group {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    display: none;
+    z-index: 5;
 }
