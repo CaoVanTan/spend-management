@@ -41,7 +41,7 @@ $row = mysqli_fetch_assoc($result);
                 <div class="date-tran">'.$spend_day.'</div>
                 <div class="note-tran">'.$row['note'].'</div>
                 <div class="amount-detail">
-                    <span class="detail-money">'.$row['money'].'</span>
+                    <span class="detail-money">-'.$row['money'].'<span class="text-decoration-underline ps-1">đ</span></span>
                 </div>';
             ?>
         </div>

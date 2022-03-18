@@ -1,36 +1,96 @@
 $(document).ready(function () {
-  $(".jsthistmonth").click(function () {
+  if ($(".jsthistmonth").attr("id") == "0") {
+    $(".thisMonth").hide();
+    $(".lastMonth2").hide();
+    $(".lastMonth1").hide();
+    $(".jsmain").show();
+  } else {
     $(".thisMonth").show();
+    $(".lastMonth2").hide();
+    $(".lastMonth1").hide();
     $(".jsmain").hide();
+  }
+
+  $(".jsthistmonth").click(function () {
+    if ($(".jsthismonth").attr("id") == "0") {
+      $(".thisMonth").hide();
+      $(".lastMonth2").hide();
+      $(".lastMonth1").hide();
+      $(".jsmain").show();
+    } else {
+      $(".lastMonth1").hide();
+      $(".thisMonth").show();
+      $(".lastMonth2").hide();
+      $(".jsmain").hide();
+    }
   });
   $(".jslastmonth1").click(function () {
-    $(".thisMonth").hide();
-    $(".jsmain").show();
+    if ($(".jslastmonth1").attr("id") == "0") {
+      $(".lastMonth1").hide();
+      $(".lastMonth2").hide();
+      $(".thisMonth").hide();
+      $(".jsmain").show();
+    } else {
+      $(".lastMonth1").show();
+      $(".thisMonth").hide();
+      $(".lastMonth2").hide();
+      $(".jsmain").hide();
+    }
   });
   $(".jslastmonth2").click(function () {
-    $(".thisMonth").hide();
-    $(".jsmain").show();
+    if ($(".jslastmonth2").attr("id") == "0") {
+      $(".lastMonth1").hide();
+      $(".lastMonth2").hide();
+      $(".thisMonth").hide();
+      $(".jsmain").show();
+    } else {
+      $(".lastMonth2").show();
+      $(".thisMonth").hide();
+      $(".lastMonth1").hide();
+      $(".jsmain").hide();
+    }
   });
+
   $(".list-transaction").click(function () {
-    $(".js_detail").show();
-    $(".jscontent-main").css({ marginRight: "690px" });
+    var spend_id = $(this).attr("id");
+
+    $.ajax({
+      url: "../../process/customer/process_id_tran.php",
+      type: "POST",
+      data: {
+        spend_id: spend_id,
+      },
+      success: function (response) {
+        if (response == spend_id) {
+          $("#load_tran").load("../../view/customer/transaction_details.php");
+          $(".jscontent-main").css({ marginRight: "690px" });
+        }
+      },
+    });
   });
+
   $(".jsbtnedittran").click(function () {
-    $(".Edit-transaction").show();
+    $("#load_tran2").load("../../view/customer/transaction_edit.php");
   });
+
   $(".jsicon_detail").click(function () {
     $(".js_detail").hide();
     $(".jscontent-main").css({ marginRight: "-40px" });
   });
+
   $(".jsbtndletetran").click(function () {
     $(".delete-transaction").show();
   });
+
   $(".jsbtnNodelete").click(function () {
     $(".delete-transaction").hide();
   });
+
+  // Add Transaction
   $(".jsbtnaddtran").click(function () {
     $(".transaction").show();
   });
+
   $(".jsbtntran").click(function () {
     $(".transaction").hide();
     $(".Edit-transaction").hide();
@@ -41,6 +101,7 @@ $(document).ready(function () {
   $(".jsIcon").click(function () {
     $(".category").hide();
   });
+
   // Model add
   $(".jsExpense").click(function () {
     $(".list-expense").show();
@@ -78,7 +139,6 @@ $(document).ready(function () {
   //         alert("Bạn phải nhập tài khoản và mật khẩu!");
   //     }
   // });
-
 
   // Model add
   $(".js-btn").click(function () {
@@ -128,4 +188,16 @@ $(document).ready(function () {
   //   setInputFilter(document.getElementById("inputMoney"), function (value) {
   //     return /^-?\d*$/.test(value);
   //   });
+});
+
+
+
+// SELECT MONTH 
+
+$(".js-select-month").click(function () {
+  $(".js-overlay__select-month").show();
+});
+
+$(".js-close").click(function () {
+  $(".js-overlay__select-month").hide();
 });
