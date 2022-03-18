@@ -157,6 +157,7 @@ $(document).ready(function() {
     $(".js-detail-close").click(function() {
         $(".overlay__detail").hide();
     });
+
     // model group
 
     $(".list-expense").click(function() {

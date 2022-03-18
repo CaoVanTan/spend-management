@@ -1,4 +1,7 @@
-<?php include('header.php') ?>
+<?php
+include 'header.php';
+?>
+
 <div class="header-left">
     <label class="icon-bar" for="check">
         <i class="fa-solid fa-bars"></i>
