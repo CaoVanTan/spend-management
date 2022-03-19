@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     if ($(".jsthistmonth").attr("id") == "0") {
         $(".thisMonth").hide();
@@ -163,7 +162,7 @@ $(document).ready(function() {
 
     $(".list-expense").click(function() {
         $(".js_group_detail").show();
-        $(".js_main_group").css({ marginRight: "30%" });
+        $(".js_main_group").css({ marginRight: "20%" });
     });
     $(".jsicon_group").click(function() {
         $(".js_group_detail").hide();
@@ -187,14 +186,14 @@ $(document).ready(function() {
     $(".jsbtnNodeleteGroup").click(function() {
         $(".js_delete-group").hide();
     });
-    
+
     // SELECT MONTH 
-    
-    $(".js-select-month").click(function () {
-      $(".js-overlay__select-month").show();
+
+    $(".js-select-month").click(function() {
+        $(".js-overlay__select-month").show();
     });
-    
-    $(".js-close").click(function () {
-      $(".js-overlay__select-month").hide();
+
+    $(".js-close").click(function() {
+        $(".js-overlay__select-month").hide();
     });
-});   
+});

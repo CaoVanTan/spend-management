@@ -38,7 +38,7 @@ include 'header.php';
     </div> -->
 
     <div class="list-item">
-        <a href="./transaction.php" class="list__item-link">
+        <a href="../customer/transaction.php" class="list__item-link">
             <span>
                 <svg data-v-0698e127="" data-v-e5c19db8="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="test" version="1.1">
                     <defs data-v-0698e127=""></defs>
@@ -52,7 +52,7 @@ include 'header.php';
         </a>
     </div>
     <div class="list-item" for="check">
-        <a href="./report.php" class="list__item-link">
+        <a href="../customer/report.php" class="list__item-link">
             <span>
                 <svg data-v-e5c19db8="" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>icon/24/collections</title>
@@ -79,15 +79,7 @@ include 'header.php';
             <span>Nhóm</span>
         </a>
     </div>
-    <div class="list-item">
-        <a href="#" class="list__item-link">
-            <span>
-            <i class="fa-solid fa-user" style = "font-size: 20px;opacity: 0.6;font-weight: 300;"></i>
-            </span>
-            <span>Quản lý tài khoản</span>
-        </a>
-    </div>
-    <div class="list-item" style = "margin-top: 145px;">
+    <div class="list-item" style = "margin-top: 240px;">
         <a href="#" class="list__item-link">
             <span>
             <i class="fa-solid fa-right-from-bracket" style = "font-size: 20px;opacity: 0.6;"></i>
