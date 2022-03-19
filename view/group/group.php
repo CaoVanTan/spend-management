@@ -2,6 +2,9 @@
 include_once '../../partials-front/header.php';
 ?>
 <section>
+    <?php
+      include_once '../../partials-front/header_navbar.php';
+    ?>
     <div class="header-group ">
         <div class="row h-100 align-items-center justify-content-end">
             <div class="col-4 d-flex">
