@@ -26,9 +26,6 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
         $Ngay[$i - 1] = $i;
     }
 }
-// print_r($TongTien);
-// echo '</br>';
-// print_r($Ngay);
 ?>
 <section>
     <div class="container">
