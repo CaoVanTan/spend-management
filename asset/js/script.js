@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     if ($(".jsthistmonth").attr("id") == "0") {
         $(".thisMonth").hide();
@@ -186,34 +187,14 @@ $(document).ready(function() {
     $(".jsbtnNodeleteGroup").click(function() {
         $(".js_delete-group").hide();
     });
-    // Check money
-    //   function setInputFilter(textbox, inputFilter) {
-    //     [
-    //       "input",
-    //       "keydown",
-    //       "keyup",
-    //       "mousedown",
-    //       "mouseup",
-    //       "select",
-    //       "contextmenu",
-    //       "drop",
-    //     ].forEach(function (event) {
-    //       textbox.addEventListener(event, function () {
-    //         if (inputFilter(this.value)) {
-    //           this.oldValue = this.value;
-    //           this.oldSelectionStart = this.selectionStart;
-    //           this.oldSelectionEnd = this.selectionEnd;
-    //         } else if (this.hasOwnProperty("oldValue")) {
-    //           this.value = this.oldValue;
-    //           this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-    //         } else {
-    //           this.value = "";
-    //         }
-    //       });
-    //     });
-    //   }
-
-    //   setInputFilter(document.getElementById("inputMoney"), function (value) {
-    //     return /^-?\d*$/.test(value);
-    //   });
-});
+    
+    // SELECT MONTH 
+    
+    $(".js-select-month").click(function () {
+      $(".js-overlay__select-month").show();
+    });
+    
+    $(".js-close").click(function () {
+      $(".js-overlay__select-month").hide();
+    });
+});   

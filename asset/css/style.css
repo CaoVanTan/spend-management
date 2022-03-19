@@ -1377,6 +1377,87 @@ a:hover {
     display: none;
 }
 
+/*CSS SELECT MONTH*/
+
+.wrapper-select-month:hover {
+  cursor: pointer;
+}
+.select-month {
+  position: absolute;
+  margin-left: 40%;
+}
+.select-month__wrap {
+  display:flex;
+  margin: 16px 0 4px 20px;
+}
+.text-month {
+  font-weight: bold;
+  margin-bottom: 0px
+}
+.fa-sort-down {
+  padding: 4px 0 0 5px;
+  font-size: 12px;
+}
+.text-date {
+  font-size:12px;
+  color: rgba(0,0,0,.7);
+  margin-bottom:0;
+}
+.overlay__select-month {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: none;
+}
+.wrapper {
+  margin-top: 80px;
+}
+.select-month-wrap {
+  background-color: #fff;
+  border-radius: 6px;
+  width: 36%;
+  margin: auto;
+}
+.box-heading {
+  display: flex;    
+  width: 100%;
+  justify-content: space-between;
+  padding: 17px 20px 17px 0px;
+  padding-left: 39px;
+  align-items: center;
+}
+.bd {
+  border-bottom: 1px solid #ddd;
+}
+.box-month {
+  cursor: pointer;
+  padding: 17px 0;
+  padding-left: 39px;
+  font-weight: 500;
+}
+.label {
+  display: block;
+  color: rgba(0,0,0,.87);
+  font-size: 16px;
+}
+.date-time {
+  color: rgba(0,0,0,.54);
+  font-size: 12px;
+}
+.box-month:hover {
+  background-color:rgba(45,184,76,.08);
+}
+.fa-solid:hover {
+  cursor: pointer;
+}
+/* 
+.check:checked ~ .box-month {
+  display: block;
+} */
 .delete-group {
     position: fixed;
     width: 100%;
