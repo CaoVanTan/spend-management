@@ -86,7 +86,7 @@ $('#reg').click(function() {
                 } else if (response == "Sai") {
                     alert("Hệ thống lỗi vui lòng thử lại.");
                 } else {
-                    alert("Hệ thống lỗi vui lòng thử lại.");
+                    alert("Hệ thống lỗi vui lòng thử lại!");
                 }
 
             }

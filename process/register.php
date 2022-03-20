@@ -14,10 +14,31 @@
             VALUES (Null,'$username','$email','$pass_hash', Null,Null)";
             $result2 = mysqli_query($con,$sql2);
             if ($result2 >0) {
-                echo"Thanhcong";
-                mysqli_close($con);
+                $sql3 = "SELECT user_id from users user_name = '$username'"
+                $result3 = mysqli_query($con,$sql);
+                     if(mysqli_num_rows($result) > 0){
+                        while($row =   mysqli_fetch_assoc($result3))
+                        {
+                            $user_id = $row["user_id"];
+                        }
+                        $sql4 = "INSERT INTO 'groups' ('group_id', 'user_id', 'group_name') VALUES
+                        (Null, '$user_id', 'Ăn uống'),
+                        (Null, '$user_id', 'Hóa đơn và tiện ích'),
+                        (Null, '$user_id', 'Mua sắm'),
+                        (Null, '$user_id', 'Di chuyển'),
+                        (Null, '$user_id', 'Giải trí')";
+                        $result4 = mysqli_query($con,$sql4);
+                        if ($result4 > 0) {
+                            echo"Thanhcong";
+                             mysqli_close($con);
+                        }else {
+                            echo"Sai";
+                        } 
+                }else {
+                    echo"Sai";
+                }
             }else {
-                echo"$sql2";
+                echo"Sai";
                 mysqli_close($con);
             }
         }else {

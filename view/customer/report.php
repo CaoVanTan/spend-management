@@ -1,31 +1,9 @@
 <?php
 include_once '../../partials-front/header.php';
-include_once '../../config/config.php';
-$Ngay = array();
-$TongTien = array();
-$Songay = date("d", mktime(0, 0, 0, date("m") + 1, 0, date("Y")));
-$dem = 1;
-$sqlSumMoney = "SELECT sum(money) as 'Tong', Day(spend_day) as 'Day' FROM spending sp, groups g, users u where
-    sp.group_id = g.group_id AND sp.user_id = u.user_id AND u.user_name = 'cvtan' AND sp.spend_day like '2022-03%' group by spend_day";
-$resultSumMoney = mysqli_query($con, $sqlSumMoney);
-if (mysqli_num_rows($resultSumMoney) > 0) {
-    while ($row =   mysqli_fetch_assoc($resultSumMoney)) {
-        for ($i = $dem; $i <= $row['Day']; $i++) {
-            $Ngay[$i - 1] = $i;
-            if ($i == $row['Day']) {
-                $TongTien[$i - 1] = $row['Tong'];
-                $dem = $row['Day'] + 1;
-                // echo $dem;
-            } else {
-                $TongTien[$i - 1] = 0;
-            }
-        }
-    }
-    for ($i = $dem; $i <= $Songay; $i++) {
-        $TongTien[$i - 1] = 0;
-        $Ngay[$i - 1] = $i;
-    }
-}
+$thismonth = date("Y-m-d", mktime(0, 0, 0, date("m"), 1, date("Y")));
+$thismonth1 =  date("Y-m-d", mktime(0, 0, 0, date("m")+1, 0, date("Y")));
+$lastmonth = date("Y-m-d", mktime(0, 0, 0, date("m") - 1, 1, date("Y")));
+$lastmonth1 = date("Y-m-d", mktime(0, 0, 0, date("m"), 0, date("Y")));
 ?>
 <section>
     <div class="container">
@@ -44,28 +22,16 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
                     <h5 class="title-month">Chọn Tháng</h5>
                     <i class="fa-solid fa-xmark js-close"></i>
                 </div>
-                <div class="box-month bd">
-                    <div class="box-month-select">
+                <div class="box-month this-month bd">
+                    <div class="box-month-select" >
                         <span class="label">Tháng này</span>
-                        <span class="date-time">01/03/2022 - 31/03/2022</span>
+                        <span class="date-time"><?php echo $thismonth ; echo " - ";echo $thismonth1;?></span>
                     </div>
                 </div>
-                <div class="box-month bd">
+                <div class="box-month last-month bd">
                     <div class="box-month-select">
                         <span class="label">Tháng trước</span>
-                        <span class="date-time">01/02/2022 - 28/02/2022</span>
-                    </div>
-                </div>
-                <div class="box-month bd">
-                    <div class="box-month-select">
-                        <span class="label">3 tháng trước</span>
-                        <span class="date-time">01/01/2022 - 31/03/2022</span>
-                    </div>
-                </div>
-                <div class="box-month bd">
-                    <div class="box-month-select">
-                        <span class="label">6 tháng trước</span>
-                        <span class="date-time">01/10/2022 - 31/03/2022</span>
+                        <span class="date-time"><?php echo $lastmonth; echo " - "; echo $lastmonth1;?></span>
                     </div>
                 </div>
             </div>
@@ -74,37 +40,27 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
 
     <div class="main__report">
         <div class="report">
-            <div class="report__top flex">
-                <div class="report__text">
-                    <h5>Thu nhập</h5>
-                </div>
-            </div>
-            <div class="report__chart">
-                <canvas id="myChart" style="width:80%; padding:68px"></canvas>
-                <script>
-                new Chart("myChart", {
-                    type: "bar",
-                    data: {
-                        labels: <?php echo json_encode($Ngay) ?>,
-                        yValueFormatString: "#,##0.## đồng",
-                        datasets: [{
-                            backgroundColor: '#45F143',
-                            data: <?php echo json_encode($TongTien) ?>,
-                        }]
-                    },
-                    options: {
-                        legend: {
-                            display: false
-                        },
-                        title: {
-                            display: false
-                        }
-                    }
-                });
-                </script>
-            </div>
+            <div class="load_report"></div>
         </div>
     </div>
 
 </section>
+<script>
+$(document).ready(function(){
+    alert("aaa");
+    $(".load_report").load("../customer/report_this_month.php");
+    $(".this-month").click(function(){
+        $(".load_report").load("../customer/report_this_month.php");
+        $(".overlay__select-month").hide();
+    })
+    $(".last-month").click(function(){
+        $(".load_report").load("../customer/report_last_month.php");
+        var  Lastmonth = $(this).text();
+        alert(Lastmonth);
+        $(".overlay__select-month").hide();
+    })
+
+})
+
+</script>
 <?php include '../../partials-front/footer.php' ?>

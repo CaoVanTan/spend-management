@@ -29,8 +29,22 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
         $Ngay[$i - 1] = $i;
     }
 }
-
+$sql = "SELECT sum(money) as 'Tongthang' From spending sp, groups g, users u where
+sp.group_id = g.group_id AND sp.user_id = u.user_id AND u.user_name = '$username' AND sp.spend_day like '$lastmonth%'";
+$result = mysqli_query($con, $sql);
+if (mysqli_num_rows($result)>0) {
+    while($row1 =   mysqli_fetch_assoc($result))
+    {
+        $TongThang = $row1["Tongthang"];
+    }
+    
+}
 ?>
+<div class="report__top flex">
+    <div class="report__text">
+        <h5>Tổng chi tiêu <?php echo $lastmonth; echo " là: "; echo number_format($TongThang); echo "đ"; ?> </h5>
+    </div>
+</div>
 <div class="report__chart">
     <canvas id="myChart" style="width:80%; padding:68px"></canvas>
     <script>
@@ -38,7 +52,7 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
             type: "bar",
             data: {
                 labels: <?php echo json_encode($Ngay) ?>,
-                yValueFormatString: "###,### đồng",
+                
                 datasets: [{
                     backgroundColor: '#45F143',
                     data: <?php echo json_encode($TongTien) ?>,
