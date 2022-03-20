@@ -119,33 +119,11 @@ $(document).ready(function() {
         $(".list-income").show();
     });
 
-    // $(".btnCancelAdd").click(function() {
-    //     $(".overlay").hide();
-    //     $(".model").hide();
-    // });
-    // //model find
-    // $(".searc").click(function() {
-    //     $(".find").show();
-    // });
-    // $(".find-close").click(function() {
-    //     $(".find").hide();
-    // });
-    // // Process Login
-    // $("#btnLogin").click(function() {
-    //     var userName = $("#inputUserName").val();
-    //     var password = $("#inputPassword").val();
-
-    //     if (userName == "" || password == "") {
-    //         alert("Bạn phải nhập tài khoản và mật khẩu!");
-    //     }
-    // });
-
     // Model add
     $(".js-btn").click(function() {
         $(".js-modal-wrap").show();
     });
 
-    // Model add
     $(".modal-list-category").click(function() {
         $(".overlay__detail").show();
     });
@@ -159,14 +137,13 @@ $(document).ready(function() {
     });
 
     // model group
-
     $(".list-expense").click(function() {
         $(".js_group_detail").show();
-        $(".js_main_group").css({ marginRight: "20%" });
+        $(".js_main_group").css({ marginRight: "45%" });
     });
     $(".jsicon_group").click(function() {
         $(".js_group_detail").hide();
-        $(".js_main_group").css({ marginRight: "-1%" });
+        $(".js_main_group").css({ marginRight: "0%" });
     });
     $(".jsbtnaddgroup").click(function() {
         $(".js_add-group").show();
@@ -175,7 +152,7 @@ $(document).ready(function() {
         $(".js_add-group").hide();
     });
     $(".jsbtneditGroup").click(function() {
-        $(".js_edit-group").show();
+        $("#load_group2").load("../../view/customer/group_edit.php");
     });
     $(".jseditbtnGroup").click(function() {
         $(".js_edit-group").hide();
@@ -187,13 +164,30 @@ $(document).ready(function() {
         $(".js_delete-group").hide();
     });
 
-    // SELECT MONTH 
-
+    // SELECT MONTH
     $(".js-select-month").click(function() {
         $(".js-overlay__select-month").show();
     });
 
     $(".js-close").click(function() {
         $(".js-overlay__select-month").hide();
+    });
+
+    // GROUPS
+    $(".list-expense").click(function() {
+        var group_id = $(this).attr("id");
+
+        $.ajax({
+            url: "../../process/customer/process_id_group.php",
+            type: "POST",
+            data: {
+                group_id: group_id,
+            },
+            success: function(response) {
+                if (response == group_id) {
+                    $("#load_group").load("../../view/customer/group_details.php");
+                }
+            },
+        });
     });
 });

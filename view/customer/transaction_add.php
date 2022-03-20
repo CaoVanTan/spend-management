@@ -12,7 +12,9 @@
                         <label for="tranGroup" class="form-label" style="margin-bottom: 0;opacity: 0.8;">Nhóm:</label>
                         <select class="form-select" required aria-label="Default select example" style="cursor: pointer;" name="tranGroup">
                             <?php
-                            $sql_add = "SELECT * FROM groups";
+                            $user_id = $_SESSION['CurrentID'];
+
+                            $sql_add = "SELECT * FROM groups WHERE user_id = '$user_id' ORDER BY group_name";
                             $result_add = mysqli_query($con, $sql_add);
                             if (mysqli_num_rows($result_add) > 0) {
                                 echo '<option value="">Chọn nhóm</option>';
