@@ -3,10 +3,6 @@
             <div class="header-add-group">
                 <h5>Thêm nhóm</h5>
             </div>
-            <div class="checkbox-group">
-                <input name="" style="margin-right: 5%;" type="radio" value="Nam" />Khoản thu
-                <input name="" style="margin-right: 5%;margin-left: 15%;" type="radio" value="Nữ" />Khoản chi
-            </div>
             <div class="name-add-group">
                 <div class="content-list-item1" style="padding: 5px 20px;">
                     <p class=" w-100" style="opacity: 0.8;margin-bottom: 0px;">Tên nhóm</p>

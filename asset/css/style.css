@@ -554,7 +554,7 @@ ul {
 }
 
 .list-item-expense {
-    padding: 10px 10px;
+    padding: 15px 10px;
     /* border-bottom: 1px solid #ccc; */
 }
 
@@ -1284,20 +1284,14 @@ a:hover {
     display: inline-flex;
 }
 
-.header-text-group {
-    line-height: 50px;
-    margin-top: 15px;
-}
-
 .main-group {
     height: 545px;
-    background-color: #ccc;
+    background-color: #e4e4e4;
 }
 
 .main-group-item {
     position: fixed;
     width: 35%;
-    min-height: 138px;
     background-color: #fff;
     top: 18%;
     right: 30%;
@@ -1331,6 +1325,7 @@ a:hover {
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
+    z-index: 5;
 }
 
 .add-group-item {
@@ -1340,7 +1335,7 @@ a:hover {
     top: 20%;
     left: 30%;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .header-add-group {
@@ -1359,13 +1354,9 @@ a:hover {
 }
 
 .name-add-group {
-    height: 70px;
-    width: 90%;
-    /* background-color: aliceblue; */
     border: 1px solid #ccc;
-    margin-left: 30px;
-    border-radius: 10px;
-    margin-top: 25px
+    border-radius: 5px;
+    margin: 35px 30px 0;
 }
 
 .edit-group {
@@ -1472,7 +1463,7 @@ a:hover {
 }
 
 
-/* 
+/*
 .check:checked ~ .box-month {
   display: block;
 } */
