@@ -1,7 +1,3 @@
-<?php
-include 'header.php';
-?>
-
 <div class="header-left d-flex flex-column justify-content-between">
     <div class="header__container">
         <label class="icon-bar" for="check">
@@ -62,4 +58,3 @@ include 'header.php';
         </a>
     </div>
 </div>
-<?php include('footer.php') ?>
