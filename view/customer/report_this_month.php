@@ -37,12 +37,21 @@ if (mysqli_num_rows($result)>0) {
     {
         $TongThang = $row1["Tongthang"];
     }
-    
 }
 ?>
 <div class="report__top flex">
     <div class="report__text">
-        <h5>Tổng chi tiêu <?php echo $thismonth; echo " là: "; echo number_format($TongThang); echo "đ"; ?> </h5>
+        <h5 class="m-0">
+            Tổng chi tiêu
+            <?php
+            $date = explode('-', $thismonth);
+            $ThangNam = $date[1] . '-' . $date[0];
+            echo $ThangNam;
+            echo " là: ";
+            echo number_format($TongThang);
+            ?>
+             đ
+        </h5>
     </div>
 </div>
 <div class="report__chart">
@@ -51,12 +60,12 @@ if (mysqli_num_rows($result)>0) {
         new Chart("myChart", {
             type: "bar",
             data: {
-                labels: <?php echo json_encode($Ngay) ?>,
+                labels: <?php echo json_encode($Ngay); ?>,
 
                 datasets: [{
-                    backgroundColor: '#45F143',                
+                    backgroundColor: '#45F143',
                     yValueFormatString: "###,##0.## đồng",
-                    data: <?php echo json_encode($TongTien) ?>,
+                    data: <?php echo json_encode($TongTien); ?>,
                 }]
             },
             options: {

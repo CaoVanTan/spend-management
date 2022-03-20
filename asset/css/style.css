@@ -989,7 +989,8 @@ a:hover {
 }
 
 .report__text {
-    padding-left: 40%;
+    text-align: center;
+    width: 100%;
 }
 
 .report__icon {

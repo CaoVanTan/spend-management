@@ -6,7 +6,7 @@
         $resultSumMoney = mysqli_query($con, $sqlSumMoney);
         $rowSumMoney = mysqli_fetch_assoc($resultSumMoney)
         ?>
-        <span style="color: red;">-<?php echo $rowSumMoney['Tong']; ?><span class="text-decoration-underline ps-1">đ</span></span>
+        <span style="color: red;">-<?php echo number_format($rowSumMoney['Tong']); ?><span class="text-decoration-underline ps-1">đ</span></span>
     </div>
     <div class="view-report">
         <a href="./report.php" class="text-uppercase" style="text-decoration: none;">Xem báo cáo cho giai đoạn này</a>
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
-                            <span class="transaction__item-money">-<?php echo $Sum; ?><span class="text-decoration-underline ps-1">đ</span> </span>
+                            <span class="transaction__item-money">-<?php echo number_format($Sum); ?><span class="text-decoration-underline ps-1">đ</span> </span>
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@
                                 echo        '<div class="item-transation-name">';
                                 echo            '<span id="" class="group_name">' . $row2['group_name'] . '</span>';
                                 echo        '</div>';
-                                echo        '<span id="" class="item-transation-money money">-' . $row2['money'] . '<span class="text-decoration-underline ps-1">đ</span></span>';
+                                echo        '<span id="" class="item-transation-money money">-' . number_format($row2['money']) . '<span class="text-decoration-underline ps-1">đ</span></span>';
                                 echo    '</div>';
                                 echo '</div>';
                             }

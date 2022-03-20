@@ -45,22 +45,23 @@ $lastmonth1 = date("Y-m-d", mktime(0, 0, 0, date("m"), 0, date("Y")));
     </div>
 
 </section>
+
+<?php include '../../partials-front/footer.php' ?>
+
 <script>
 $(document).ready(function(){
-    alert("aaa");
     $(".load_report").load("../customer/report_this_month.php");
+
     $(".this-month").click(function(){
         $(".load_report").load("../customer/report_this_month.php");
         $(".overlay__select-month").hide();
     })
+
     $(".last-month").click(function(){
         $(".load_report").load("../customer/report_last_month.php");
         var  Lastmonth = $(this).text();
-        alert(Lastmonth);
         $(".overlay__select-month").hide();
     })
-
 })
-
 </script>
-<?php include '../../partials-front/footer.php' ?>
+
