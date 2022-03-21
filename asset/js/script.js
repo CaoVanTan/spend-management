@@ -63,7 +63,7 @@ $(document).ready(function() {
             success: function(response) {
                 if (response == spend_id) {
                     $("#load_tran").load("../../view/customer/transaction_details.php");
-                    $(".jscontent-main").css({ marginRight: "690px" });
+                    $(".jscontent-main").css({ marginRight: "55%" });
                 }
             },
         });
