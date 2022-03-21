@@ -42,7 +42,14 @@ $lastmonth1 = date("Y-m-d", mktime(0, 0, 0, date("m"), 0, date("Y")));
         </div>
     </div>
 
+<<<<<<< HEAD
 </section><?php include '../../partials-front/footer.php' ?>
+=======
+</section>
+
+<?php include '../../partials-front/footer.php' ?>
+
+>>>>>>> 0e48d67d8f839be09fdc72bb25ec37a3a6f5e0c8
 <script>
 $(document).ready(function(){
 
@@ -67,4 +74,3 @@ $(document).ready(function(){
 })
 
 </script>
-
