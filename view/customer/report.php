@@ -45,6 +45,9 @@ $lastmonth1 = date("Y-m-d", mktime(0, 0, 0, date("m"), 0, date("Y")));
     </div>
 
 </section>
+
+<?php include '../../partials-front/footer.php' ?>
+
 <script>
 $(document).ready(function(){
     alert("aaa");
@@ -63,4 +66,3 @@ $(document).ready(function(){
 })
 
 </script>
-<?php include '../../partials-front/footer.php' ?>
