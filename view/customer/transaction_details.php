@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 include_once '../../config/config.php';
 
 $spend_id = $_SESSION['id_tran'];
@@ -31,7 +33,7 @@ $row = mysqli_fetch_assoc($result);
     </div>
     <div class="cate-note">
         <div class="imgcar">
-            <img src="https://static.moneylover.me/img/icon/ic_category_transport.png" alt="" style="height: 50px">
+            <img src="https://static.moneylover.me/img/icon/icon_22.png" alt="" style="height: 50px">
         </div>
         <div class="cate-note-amount-content">
             <?php
