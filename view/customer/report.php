@@ -41,19 +41,13 @@ $lastmonth1 = date("Y-m-d", mktime(0, 0, 0, date("m"), 0, date("Y")));
             <div class="load_report"></div>
         </div>
     </div>
-
-<<<<<<< HEAD
-</section><?php include '../../partials-front/footer.php' ?>
-=======
 </section>
-
 <?php include '../../partials-front/footer.php' ?>
 
->>>>>>> 0e48d67d8f839be09fdc72bb25ec37a3a6f5e0c8
 <script>
 $(document).ready(function(){
-
     $(".load_report").load("../customer/report_this_month.php");
+
     $(".this-month").click(function(){
         $(".load_report").load("../customer/report_this_month.php");
         var  Thismonth = $("#text-this-month").text();
@@ -62,6 +56,7 @@ $(document).ready(function(){
         $(".text-date").text(Date_t_month);
         $(".overlay__select-month").hide();
     })
+
     $(".last-month").click(function(){
         $(".load_report").load("../customer/report_last_month.php");
         var  Lastmonth = $("#text-last-month").text();
@@ -70,7 +65,7 @@ $(document).ready(function(){
         $(".text-date").text(Date_l_month);
         $(".overlay__select-month").hide();
     })
-
 })
-
 </script>
+
+

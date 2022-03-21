@@ -10,7 +10,7 @@
         $result1 = mysqli_query($con,$sql1);
         if(mysqli_num_rows($result1) <= 0){
             $pass_hash = password_hash($pass,PASSWORD_DEFAULT);
-            $sql2 = "INSERT INTO users ( `user_id`,`user_name`, `email`, `password`,`gender`, `birthday`) 
+            $sql2 = "INSERT INTO users ( `user_id`,`user_name`, `email`, `password`,`gender`, `birthday`)
             VALUES (Null,'$username','$email','$pass_hash', Null,Null)";
             $result2 = mysqli_query($con,$sql2);
             if ($result2 >0) {
@@ -33,7 +33,7 @@
                              mysqli_close($con);
                         }else {
                             echo"Sai";
-                        } 
+                        }
                 }else {
                     echo"Sai";
                 }
