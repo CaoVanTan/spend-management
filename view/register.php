@@ -75,7 +75,7 @@ $('#reg').click(function() {
                 Email: $Email,
             },
             success: function(response) {
-                alert(response);
+                // alert(response);
                 if (response == "Thanhcong") {
                     alert("Bạn đã đăng ký thành công.");
                     window.location.href = "../view/login.php";
