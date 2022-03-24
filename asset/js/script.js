@@ -55,14 +55,14 @@ $(document).ready(function() {
         var spend_id = $(this).attr("id");
 
         $.ajax({
-            url: "../../process/customer/process_id_tran.php",
+            url: "../../process/customer/process_id_spend.php",
             type: "POST",
             data: {
                 spend_id: spend_id,
             },
             success: function(response) {
                 if (response == spend_id) {
-                    $("#load_tran").load("../../view/customer/transaction_details.php");
+                    $("#load_tran").load("../../view/customer/spending_details.php");
                     $(".jscontent-main").css({ marginRight: "55%" });
                 }
             },
@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     $(".jsbtnedittran").click(function() {
-        $("#load_tran2").load("../../view/customer/transaction_edit.php");
+        $("#load_tran2").load("../../view/customer/spending_edit.php");
     });
 
     $(".jsicon_detail").click(function() {

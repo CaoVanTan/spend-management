@@ -14,6 +14,8 @@
         } else {
             echo "Error";
         }
+    } else {
+        echo "Error";
     }
 
     mysqli_close($con);

@@ -1,10 +1,8 @@
 <?php
-if (!isset($_SESSION)) {
-    session_start();
-}
+session_start();
 include_once '../../config/config.php';
 
-$spend_id = $_SESSION['id_tran'];
+$spend_id = $_SESSION['spend_id'];
 $sql = "SELECT sp.*, g.* FROM spending sp, groups g WHERE sp.group_id = g.group_id AND sp.spend_id = '$spend_id'";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);

@@ -7,7 +7,7 @@
         <input type="checkbox" class="check-menu" id="check" hidden>
 
         <div class="list-item">
-            <a href="../customer/transaction.php" class="list__item-link">
+            <a href="../customer/spending.php" class="list__item-link">
                 <span>
                     <svg data-v-0698e127="" data-v-e5c19db8="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="test" version="1.1">
                         <defs data-v-0698e127=""></defs>

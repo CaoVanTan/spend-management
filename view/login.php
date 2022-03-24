@@ -77,7 +77,7 @@
                 },
                 success: function(response) {
                     if (response == "Thanhcong") {
-                        window.location.href = "../view/customer/transaction.php";
+                        window.location.href = "../view/customer/spending.php";
                     } else if (response == "Sai") {
                         alert("Sai tài khoản hoặc mật khẩu.");
                     }

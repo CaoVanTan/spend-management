@@ -1,7 +1,6 @@
 <?php
 include_once '../../config/config.php';
-
-if (!isset($_SESSION)) {
+if(!isset($_SESSION)) {
     session_start();
 }
 ?>
@@ -14,14 +13,14 @@ if (!isset($_SESSION)) {
 
         <form method="POST" action="../../process/customer/edit_group.php">
             <?php
-                if(isset($_SESSION['group_id'])) {
-                    $userId = $_SESSION['CurrentID'];
-                    $group_id = $_SESSION['group_id'];
+            if (isset($_SESSION['group_id'])) {
+                $userId = $_SESSION['CurrentID'];
+                $group_id = $_SESSION['group_id'];
 
-                    $sql_cr = "SELECT u.user_id, g.* FROM users u, groups g WHERE g.user_id = u.user_id AND g.group_id  = '$group_id'";
-                    $result_cr = mysqli_query($con, $sql_cr);
-                    $row_cr = mysqli_fetch_assoc($result_cr);
-                }
+                $sql_cr = "SELECT u.user_id, g.* FROM users u, groups g WHERE g.user_id = u.user_id AND g.group_id  = '$group_id'";
+                $result_cr = mysqli_query($con, $sql_cr);
+                $row_cr = mysqli_fetch_assoc($result_cr);
+            }
             ?>
             <div class="name-add-group">
                 <div class="content-list-item1" style="padding: 5px 20px;">

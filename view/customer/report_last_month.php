@@ -1,8 +1,7 @@
 <?php
-if (!isset($_SESSION)) {
-    session_start();
-}
+session_start();
 include_once '../../config/config.php';
+
 $username = $_SESSION['CurrentUser'];
 $Ngay = array();
 $TongTien = array();
@@ -29,6 +28,7 @@ if (mysqli_num_rows($resultSumMoney) > 0) {
         $Ngay[$i - 1] = $i;
     }
 }
+
 $sql = "SELECT sum(money) as 'Tongthang' From spending sp, groups g, users u where
 sp.group_id = g.group_id AND sp.user_id = u.user_id AND u.user_name = '$username' AND sp.spend_day like '$lastmonth%'";
 $result = mysqli_query($con, $sql);
@@ -38,6 +38,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 }
 ?>
+
 <div class="report__top flex">
     <div class="report__text">
         <h5 class="m-0">
@@ -60,7 +61,6 @@ if (mysqli_num_rows($result) > 0) {
             type: "bar",
             data: {
                 labels: <?php echo json_encode($Ngay) ?>,
-
                 datasets: [{
                     backgroundColor: '#45F143',
                     data: <?php echo json_encode($TongTien) ?>,
