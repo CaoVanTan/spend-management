@@ -10,7 +10,7 @@
                 <div class="jscategory content-list-item" style="cursor:pointer;">
                     <div class="content-list-item1">
                         <label for="tranGroup" class="form-label" style="margin-bottom: 0;opacity: 0.8;">Nhóm chi tiêu:</label>
-                        <select class="form-select" required aria-label="Default select example" style="cursor: pointer;" name="tranGroup">
+                        <select class="form-select" required aria-label="Default select example" style="cursor: pointer;" name="spendGroup">
                             <?php
                             $user_id = $_SESSION['CurrentID'];
 
