@@ -1,9 +1,8 @@
 <?php
-if (!isset($_SESSION)) {
-    session_start();
-}
+session_start();
 include_once '../../partials-front/header.php';
 include_once '../../config/config.php';
+
 $username = $_SESSION['CurrentUser'];
 $thismonth = date("Y-m", mktime(0, 0, 0, date("m"), date("d"), date("Y")));
 $lastmonth1 = date("Y-m", mktime(0, 0, 0, date("m") - 1, date("d"), date("Y")));
@@ -20,7 +19,7 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m") - 1, 0, date("Y")));
     </div>
 
     <?php
-    include_once '../../partials-front/header_transaction.php';
+    include_once '../../partials-front/header_spending.php';
     ?>
 
     <div class="content">
@@ -67,8 +66,8 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m") - 1, 0, date("Y")));
                     </ul>
                 </div>
             </div>
-            <!-- No transaction -->
 
+            <!-- No transaction -->
             <div class="jsmain">
                 <div class="main-item">
                     <span style="font-size: 80px;">:-)</span>
@@ -80,9 +79,9 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m") - 1, 0, date("Y")));
 
             <!-- Transactions -->
             <?php
-            include_once "./transaction_this_month.php";
-            include_once "./transaction_last_month.php";
-            include_once "./transaction_last_month2.php";
+            include_once "./spending_this_month.php";
+            include_once "./spending_last_month.php";
+            include_once "./spending_last_month2.php";
             ?>
         </div>
     </div>
@@ -96,10 +95,10 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m") - 1, 0, date("Y")));
     <?php
 
     // Add Transaction
-    include_once "./transaction_add.php";
+    include_once "./spending_add.php";
 
     // Delete Transaction
-    include_once "./transaction_delete.php";
+    include_once "./spending_delete.php";
     ?>
 </section>
 
