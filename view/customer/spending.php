@@ -72,7 +72,7 @@ $lastmonth4 = date("d/m/Y", mktime(0, 0, 0, date("m") - 1, 0, date("Y")));
                 <div class="main-item">
                     <span style="font-size: 80px;">:-)</span>
                     <div>
-                        <span>Không có giao dịch</span>
+                        <span>Không có khoản chi tiêu</span>
                     </div>
                 </div>
             </div>

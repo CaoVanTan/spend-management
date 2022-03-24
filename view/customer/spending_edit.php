@@ -22,8 +22,8 @@ session_start();
             <div class="d-flex justify-content-between">
                 <div class="jscategory content-list-item" style="cursor:pointer;">
                     <div class="content-list-item1">
-                        <label for="tranGroup" class="form-label" style="margin-bottom: 0;opacity: 0.8;">Nhóm chi tiêu:</label>
-                        <select class="form-select" aria-label="Default select example" style="cursor: pointer;" name="tranGroup">
+                        <label for="spendGroup" class="form-label" style="margin-bottom: 0;opacity: 0.8;">Nhóm chi tiêu:</label>
+                        <select class="form-select" aria-label="Default select example" style="cursor: pointer;" name="spendGroup">
                             <?php
                             $user_id = $_SESSION['CurrentID'];
                             $sql_edit = "SELECT * FROM groups WHERE user_id = '$user_id' ORDER BY group_name";

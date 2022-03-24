@@ -6,7 +6,13 @@
         $resultSumMoney = mysqli_query($con, $sqlSumMoney);
         $rowSumMoney = mysqli_fetch_assoc($resultSumMoney)
         ?>
-        <span style="color: red;">-<?php echo number_format($rowSumMoney['Tong']); ?><span class="text-decoration-underline ps-1">đ</span></span>
+        <span style="color: red;">
+            -
+            <?php
+            echo number_format($rowSumMoney['Tong']);
+            ?>
+            <span class="text-decoration-underline ps-1">đ</span>
+        </span>
     </div>
     <div class="view-report">
         <a href="./report.php" class="text-uppercase" style="text-decoration: none;">Xem báo cáo cho giai đoạn này</a>

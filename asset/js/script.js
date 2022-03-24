@@ -17,11 +17,13 @@ $(document).ready(function() {
             $(".lastMonth2").hide();
             $(".lastMonth1").hide();
             $(".jsmain").show();
+            console.log("0");
         } else {
             $(".lastMonth1").hide();
             $(".thisMonth").show();
             $(".lastMonth2").hide();
             $(".jsmain").hide();
+            console.log("1");
         }
     });
     $(".jslastmonth1").click(function() {
@@ -29,12 +31,12 @@ $(document).ready(function() {
             $(".lastMonth1").hide();
             $(".lastMonth2").hide();
             $(".thisMonth").hide();
-            $(".jsmain").show();
+            $(".jsmain").show();console.log("0");
         } else {
             $(".lastMonth1").show();
             $(".thisMonth").hide();
             $(".lastMonth2").hide();
-            $(".jsmain").hide();
+            $(".jsmain").hide();console.log("0");
         }
     });
     $(".jslastmonth2").click(function() {
