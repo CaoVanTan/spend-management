@@ -23,7 +23,7 @@ $row = mysqli_fetch_assoc($result);
                 </svg>
             </div>
             <div class="d-flex align-items-center justify-content-between w-100 ms-3">
-                <span class="toolbar-detail-title">Chi tiết về giao dịch</span>
+                <span class="toolbar-detail-title">Chi tiết về khoản chi tiêu</span>
                 <div class="toolbar-detail-action">
                     <button type="button" class="jsbtndletetran btn btnDE">Xóa</button>
                     <button type="button" class="jsbtnedittran btn btnED">Sửa</button>

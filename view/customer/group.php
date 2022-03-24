@@ -14,7 +14,7 @@ if (!isset($_SESSION)) {
     <div class="main-group">
         <div class="js_main_group main-group-item">
             <div class="header-main-group">
-                <span>KHOẢN CHI</span>
+                <span>NHÓM CHI TIÊU</span>
             </div>
 
             <?php

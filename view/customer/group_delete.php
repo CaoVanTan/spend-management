@@ -1,10 +1,10 @@
 <div class="js_delete-group delete-group">
         <div class="delete-tran">
             <div class="header-delete">
-                <span>Xác nhận xóa giao dịch</span>
+                <span>Xác nhận xóa nhóm chi tiêu</span>
             </div>
             <div class="text-delete-tran">
-                <span>Bạn sẽ mất toàn bộ các giao dịch trong nhóm.</span>
+                <span>Bạn sẽ mất toàn bộ các khoản chi tiêu trong nhóm chi tiêu.</span>
             </div>
             <div class="text-delete-tran">
                 <span>Bạn thực sự muốn xóa?</span>

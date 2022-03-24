@@ -9,7 +9,7 @@ if (!isset($_SESSION)) {
     <form method="post" action="../../process/customer/edit_transaction.php" class="add-transaction">
         <div class="header-add-tran">
             <span>
-                Sửa giao dịch
+                Sửa khoản chi tiêu
             </span>
         </div>
         <?php
@@ -25,7 +25,7 @@ if (!isset($_SESSION)) {
             <div class="d-flex justify-content-between">
                 <div class="jscategory content-list-item" style="cursor:pointer;">
                     <div class="content-list-item1">
-                        <label for="tranGroup" class="form-label" style="margin-bottom: 0;opacity: 0.8;">Nhóm:</label>
+                        <label for="tranGroup" class="form-label" style="margin-bottom: 0;opacity: 0.8;">Nhóm chi tiêu:</label>
                         <select class="form-select" aria-label="Default select example" style="cursor: pointer;" name="tranGroup">
                             <?php
                             $user_id = $_SESSION['CurrentID'];

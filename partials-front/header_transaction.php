@@ -16,7 +16,7 @@
             <div class="col-8">
                 <ul class="nav justify-content-end">
                     <li class="nav-item ms-4">
-                        <button type="button" class="jsbtnaddtran btn">THÊM GIAO DỊCH</button>
+                        <button type="button" class="jsbtnaddtran btn">THÊM KHOẢN CHI TIÊU</button>
                     </li>
                 </ul>
             </div>

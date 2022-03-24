@@ -3,7 +3,7 @@
             <div class="col-8">
                 <ul class="nav justify-content-end">
                     <li class="nav-item ms-4">
-                        <button type="button" class="jsbtnaddgroup btn">THÊM NHÓM</button>
+                        <button type="button" class="jsbtnaddgroup btn">THÊM NHÓM CHI TIÊU</button>
                     </li>
                 </ul>
             </div>

@@ -17,7 +17,7 @@
                         </g>
                     </svg>
                 </span>
-                <span>Sổ giao dịch</span>
+                <span>Khoản chi tiêu</span>
             </a>
         </div>
         <div class="list-item" for="check">
@@ -45,7 +45,7 @@
                 <span>
                     <i class="fa-brands fa-blackberry" style="font-size: 20px;opacity: 0.6;font-weight: 300;"></i>
                 </span>
-                <span>Nhóm</span>
+                <span>Nhóm chi tiêu</span>
             </a>
         </div>
     </div>

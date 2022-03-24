@@ -23,7 +23,7 @@ $row = mysqli_fetch_assoc($result);
                     </g>
                 </svg>
             </div>
-            <span style="margin-right: 40%;">Chi tiết về nhóm</span>
+            <span style="margin-right: 25%;">Chi tiết về nhóm chi tiêu</span>
             <button type="button" class="jsbtndleteGroup btn  btnDE" style="color: #dc3545;">Xóa</button>
             <button type="button" class="jsbtneditGroup btn btnDE" style="color: #198754">Sửa</button>
         </div>
