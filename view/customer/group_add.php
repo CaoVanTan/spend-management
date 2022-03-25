@@ -9,7 +9,7 @@
                     <p class=" w-100" style="opacity: 0.8;margin-bottom: 0px;">Tên nhóm chi tiêu</p>
                 </div>
                 <div class="content-list-item2" style="padding: 5px 20px;">
-                    <input name="groupName" id="inputGroupName" required type="text" class="input w-100" placeholder="Tên nhóm chi tiêu">
+                    <input name="groupName" id="inputGroupName" required type="text" class="inputGroupName input w-100" placeholder="Tên nhóm chi tiêu">
                 </div>
             </div>
             <div class="button1">

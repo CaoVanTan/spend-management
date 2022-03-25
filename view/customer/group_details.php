@@ -35,9 +35,6 @@ $row = mysqli_fetch_assoc($result);
         <?php
         echo '<div class="cate-note-amount-content">
                 <h3 style="margin: 0px;">' . $row['group_name'] . '</h3>
-                <div class="date-tran" style="width: 70px;padding: 2px;background-color: #dc3545;border-radius: 11px;color: #fff;">
-                    Khoản chi
-                </div>
             </div>';
         ?>
 

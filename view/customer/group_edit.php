@@ -11,7 +11,7 @@ if(!isset($_SESSION)) {
             <h5>Sửa nhóm chi tiêu</h5>
         </div>
 
-        <form method="POST" action="../../process/customer/edit_group.php">
+        <form class="form_groups" method="POST" action="../../process/customer/edit_group.php">
             <?php
             if (isset($_SESSION['group_id'])) {
                 $userId = $_SESSION['CurrentID'];
@@ -27,7 +27,7 @@ if(!isset($_SESSION)) {
                     <p class=" w-100" style="opacity: 0.8;margin-bottom: 0px;">Tên nhóm chi tiêu</p>
                 </div>
                 <div class="content-list-item2" style="padding: 5px 20px;">
-                    <input name="groupName" id="inputGroupName" required value="<?php echo $row_cr['group_name'];  ?>" type="text" class="input w-100" placeholder="Tên nhóm chi tiêu">
+                    <input name="groupName" id="inputGroupName" required value="<?php echo $row_cr['group_name'];  ?>" type="text" class="inputGroupName input w-100" placeholder="Tên nhóm chi tiêu">
                 </div>
             </div>
             <div class="button1">

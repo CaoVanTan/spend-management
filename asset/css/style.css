@@ -318,6 +318,7 @@ ul {
 .cate-note {
     padding: 15px 40px 30px;
     display: inline-flex;
+    align-items: center;
 }
 
 .imgcar {

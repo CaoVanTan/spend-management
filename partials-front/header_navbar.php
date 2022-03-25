@@ -37,7 +37,7 @@
                         </g>
                     </svg>
                 </span>
-                <span>Báo cáo</span>
+                <span>Thống kê</span>
             </a>
         </div>
         <div class="list-item">
