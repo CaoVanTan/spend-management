@@ -219,25 +219,4 @@ $(document).ready(function () {
       event.preventDefault();
     //if a decimal has been added, disable the "."-button
   });
-
-  // Check input group name
-  $(".inputGroupName").keydown(function (event) {
-    if (
-      (event.keyCode >= 48 && event.keyCode <= 90) ||
-      (event.keyCode >= 96 && event.keyCode <= 105) ||
-      event.keyCode == 8 ||
-      event.keyCode == 9 ||
-      event.keyCode == 32 ||
-      event.keyCode == 13 ||
-      event.keyCode == 16 ||
-      event.keyCode == 37 ||
-      event.keyCode == 39 ||
-      event.keyCode == 46 ||
-      event.keyCode == 190
-    ) {
-    } else {
-      alert("Không được nhập ký tự.");
-      event.preventDefault(); // Now nothing will happen
-    }
-  });
 });

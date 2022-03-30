@@ -24,11 +24,10 @@
                         <div class="form__body">
                             <div class="account fl">
                                 <div class="form">
-                                    <input class="input__text" type="email" id="reg_email" placeholder="Email">
-                                    <input class="input__text" type="text" id="reg_username"
-                                        placeholder="Tên đăng nhập">
-                                    <input class="input__text" type="password" id="reg_pass" placeholder="Mật khẩu">
-                                    <button class="form__btn mt-2" id="reg">ĐĂNG KÝ</button>
+                                    <input class="input__text" type="email" id="reg_email" placeholder="Email" required>
+                                    <input class="input__text" type="text" id="reg_username" placeholder="Tên đăng nhập" required>
+                                    <input class="input__text" type="password" id="reg_pass" placeholder="Mật khẩu" required>
+                                    <button class="form__btn mt-2" type="submit" id="reg">ĐĂNG KÝ</button>
                                 </div>
                                 <div class="form__suggest">
                                     <p class="form__suggest-text">Bạn đã có tài khoản?

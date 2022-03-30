@@ -15,9 +15,23 @@
             <div class="button1">
                 <div class="d-md-flex justify-content-md-end">
                     <button class="jsbtnGroup btn btn-cancel" type="button">Hủy</button>
-                    <button name="btnAddGroup" class="btn btn-save" type="submit">Lưu</button>
+                    <button name="btnAddGroup" class="btn-group btn btn-save" type="submit">Lưu</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
+
+<?php
+$sql_get_group = "SELECT * FROM groups WHERE group_name = '$groupName'";
+$result_get_group = mysqli_query($con, $sql_get_group);
+
+echo "$('.btn-group').click(function() {";
+        if(mysqli_num_rows($result_get_group) > 0) {
+            echo "<script>
+                    alert('Nhóm chi tiêu đã tồn tại.');
+                    event.preventDefault();
+                </script>";
+        }
+echo " });";
+?>
